@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58E573442A05843B002C709C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 58E573432A05843B002C709C /* Alamofire */; };
+		58E573472A05852A002C709C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E573462A058529002C709C /* TabBarController.swift */; };
+		58E573492A058590002C709C /* AttendanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E573482A058590002C709C /* AttendanceViewController.swift */; };
+		58E5734B2A0585AA002C709C /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E5734A2A0585AA002C709C /* ScheduleViewController.swift */; };
+		58E5734D2A0585C2002C709C /* GradeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E5734C2A0585C2002C709C /* GradeViewController.swift */; };
+		58E5734F2A064CA1002C709C /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E5734E2A064CA1002C709C /* LocationController.swift */; };
+		58E573512A064CF3002C709C /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E573502A064CF3002C709C /* LocationModel.swift */; };
+		58E573532A064DA8002C709C /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E573522A064DA8002C709C /* LocationViewModel.swift */; };
+		58E5735A2A06C9DF002C709C /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E573592A06C9DF002C709C /* SettingViewController.swift */; };
 		58EDC21A2A0568CD009CBE74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EDC2192A0568CD009CBE74 /* AppDelegate.swift */; };
 		58EDC21C2A0568CD009CBE74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EDC21B2A0568CD009CBE74 /* SceneDelegate.swift */; };
 		58EDC21E2A0568CD009CBE74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EDC21D2A0568CD009CBE74 /* ViewController.swift */; };
@@ -14,10 +23,18 @@
 		58EDC2262A0568CE009CBE74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58EDC2242A0568CE009CBE74 /* LaunchScreen.storyboard */; };
 		58EDC22F2A056A7D009CBE74 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 58EDC22E2A056A7D009CBE74 /* Then */; };
 		58EDC2322A056AB1009CBE74 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 58EDC2312A056AB1009CBE74 /* SnapKit */; };
-		58EDC2342A057299009CBE74 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 58EDC2332A057299009CBE74 /* logo.png */; };
+		58EDC2402A057FE3009CBE74 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 58EDC23F2A057FE3009CBE74 /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		58E573462A058529002C709C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		58E573482A058590002C709C /* AttendanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceViewController.swift; sourceTree = "<group>"; };
+		58E5734A2A0585AA002C709C /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		58E5734C2A0585C2002C709C /* GradeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeViewController.swift; sourceTree = "<group>"; };
+		58E5734E2A064CA1002C709C /* LocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
+		58E573502A064CF3002C709C /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		58E573522A064DA8002C709C /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		58E573592A06C9DF002C709C /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		58EDC2162A0568CD009CBE74 /* ReEd_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReEd_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58EDC2192A0568CD009CBE74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58EDC21B2A0568CD009CBE74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -25,7 +42,7 @@
 		58EDC2222A0568CE009CBE74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58EDC2252A0568CE009CBE74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58EDC2272A0568CE009CBE74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		58EDC2332A057299009CBE74 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = "../../../Downloads/ReEd 로고/배경투명 밑에 글씨/logo.png"; sourceTree = "<group>"; };
+		58EDC23F2A057FE3009CBE74 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = "../../../../Downloads/ReEd 로고 2/배경투명 밑에 글씨/logo.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58E573442A05843B002C709C /* Alamofire in Frameworks */,
 				58EDC22F2A056A7D009CBE74 /* Then in Frameworks */,
 				58EDC2322A056AB1009CBE74 /* SnapKit in Frameworks */,
 			);
@@ -41,6 +59,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58E573452A0584F0002C709C /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				58E573462A058529002C709C /* TabBarController.swift */,
+				58E573482A058590002C709C /* AttendanceViewController.swift */,
+				58E5734A2A0585AA002C709C /* ScheduleViewController.swift */,
+				58E5734C2A0585C2002C709C /* GradeViewController.swift */,
+				58E573592A06C9DF002C709C /* SettingViewController.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
 		58EDC20D2A0568CD009CBE74 = {
 			isa = PBXGroup;
 			children = (
@@ -60,15 +90,91 @@
 		58EDC2182A0568CD009CBE74 /* ReEd_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				58EDC2192A0568CD009CBE74 /* AppDelegate.swift */,
-				58EDC21B2A0568CD009CBE74 /* SceneDelegate.swift */,
-				58EDC21D2A0568CD009CBE74 /* ViewController.swift */,
-				58EDC2222A0568CE009CBE74 /* Assets.xcassets */,
-				58EDC2242A0568CE009CBE74 /* LaunchScreen.storyboard */,
+				58EDC2352A057EB3009CBE74 /* Application */,
+				58EDC2362A057EC8009CBE74 /* Network */,
+				58EDC2372A057ED2009CBE74 /* Extensions */,
+				58EDC2382A057EE8009CBE74 /* Screens */,
+				58EDC2392A057EF4009CBE74 /* Resource */,
 				58EDC2272A0568CE009CBE74 /* Info.plist */,
-				58EDC2332A057299009CBE74 /* logo.png */,
 			);
 			path = ReEd_iOS;
+			sourceTree = "<group>";
+		};
+		58EDC2352A057EB3009CBE74 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				58EDC2192A0568CD009CBE74 /* AppDelegate.swift */,
+				58EDC21B2A0568CD009CBE74 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		58EDC2362A057EC8009CBE74 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		58EDC2372A057ED2009CBE74 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		58EDC2382A057EE8009CBE74 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				58E573452A0584F0002C709C /* Tabbar */,
+				58EDC23E2A057F6A009CBE74 /* Launch */,
+				58EDC23B2A057F3F009CBE74 /* Model */,
+				58EDC23D2A057F53009CBE74 /* View */,
+				58EDC23C2A057F46009CBE74 /* ViewModel */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		58EDC2392A057EF4009CBE74 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				58EDC23F2A057FE3009CBE74 /* logo.png */,
+				58EDC2222A0568CE009CBE74 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		58EDC23B2A057F3F009CBE74 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				58E573502A064CF3002C709C /* LocationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		58EDC23C2A057F46009CBE74 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				58E573522A064DA8002C709C /* LocationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		58EDC23D2A057F53009CBE74 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				58EDC21D2A0568CD009CBE74 /* ViewController.swift */,
+				58E5734E2A064CA1002C709C /* LocationController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		58EDC23E2A057F6A009CBE74 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				58EDC2242A0568CE009CBE74 /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,6 +196,7 @@
 			packageProductDependencies = (
 				58EDC22E2A056A7D009CBE74 /* Then */,
 				58EDC2312A056AB1009CBE74 /* SnapKit */,
+				58E573432A05843B002C709C /* Alamofire */,
 			);
 			productName = ReEd_iOS;
 			productReference = 58EDC2162A0568CD009CBE74 /* ReEd_iOS.app */;
@@ -122,6 +229,7 @@
 			packageReferences = (
 				58EDC22D2A056A7D009CBE74 /* XCRemoteSwiftPackageReference "Then" */,
 				58EDC2302A056AB1009CBE74 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				58E573422A05843B002C709C /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 58EDC2172A0568CD009CBE74 /* Products */;
 			projectDirPath = "";
@@ -137,7 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58EDC2342A057299009CBE74 /* logo.png in Resources */,
+				58EDC2402A057FE3009CBE74 /* logo.png in Resources */,
 				58EDC2262A0568CE009CBE74 /* LaunchScreen.storyboard in Resources */,
 				58EDC2232A0568CE009CBE74 /* Assets.xcassets in Resources */,
 			);
@@ -150,7 +258,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58E573512A064CF3002C709C /* LocationModel.swift in Sources */,
+				58E5734F2A064CA1002C709C /* LocationController.swift in Sources */,
+				58E5734B2A0585AA002C709C /* ScheduleViewController.swift in Sources */,
+				58E573532A064DA8002C709C /* LocationViewModel.swift in Sources */,
+				58E573492A058590002C709C /* AttendanceViewController.swift in Sources */,
 				58EDC21E2A0568CD009CBE74 /* ViewController.swift in Sources */,
+				58E5735A2A06C9DF002C709C /* SettingViewController.swift in Sources */,
+				58E5734D2A0585C2002C709C /* GradeViewController.swift in Sources */,
+				58E573472A05852A002C709C /* TabBarController.swift in Sources */,
 				58EDC21A2A0568CD009CBE74 /* AppDelegate.swift in Sources */,
 				58EDC21C2A0568CD009CBE74 /* SceneDelegate.swift in Sources */,
 			);
@@ -364,6 +480,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		58E573422A05843B002C709C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		58EDC22D2A056A7D009CBE74 /* XCRemoteSwiftPackageReference "Then" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devxoul/Then";
@@ -383,6 +507,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		58E573432A05843B002C709C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58E573422A05843B002C709C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		58EDC22E2A056A7D009CBE74 /* Then */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 58EDC22D2A056A7D009CBE74 /* XCRemoteSwiftPackageReference "Then" */;

@@ -50,6 +50,7 @@ class ViewController: UIViewController {
         view.backgroundColor = .white
         setupSubviews()
         setupConstraints()
+        loginButton.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
              view.addGestureRecognizer(tapGesture)
@@ -58,8 +59,6 @@ class ViewController: UIViewController {
          @objc private func dismissKeyboard() {
              view.endEditing(true)
          }
-
-    
     
     private func setupSubviews() {
         view.addSubview(logoImage)
@@ -101,6 +100,15 @@ class ViewController: UIViewController {
             make.top.equalTo(loginButton.snp.bottom).offset(20)
             make.leading.trailing.equalToSuperview().inset(20)
             make.height.equalTo(40)
+        }
+    }
+    
+    @objc private func didTapLoginButton() {
+    
+        let tabbarController = TabBarController()
+        
+        dismiss(animated: true) {
+            UIApplication.shared.windows.first?.rootViewController = tabbarController
         }
         
     }
