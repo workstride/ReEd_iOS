@@ -11,7 +11,7 @@ class AttendanceViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         view.backgroundColor = .white
         let helloLabel = UILabel()
         helloLabel.text = "Hello!"
@@ -19,10 +19,9 @@ class AttendanceViewController: UIViewController {
         helloLabel.font = UIFont.systemFont(ofSize: 24, weight: .bold)
         helloLabel.textAlignment = .center
         view.addSubview(helloLabel)
-        
+
         helloLabel.snp.makeConstraints { make in
             make.center.equalToSuperview()
         }
     }
 }
-

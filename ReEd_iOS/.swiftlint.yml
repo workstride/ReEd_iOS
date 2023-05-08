@@ -1,0 +1,10 @@
+disabled_rules:
+- leading_whitespace
+- trailing_whitespace
+- mark
+- comma
+
+excluded:
+- /Users/kimgeonwoo/Desktop/ReEd_iOS/Screens/ViewModel/LoginViewModel.swift
+- /Users/kimgeonwoo/Desktop/ReEd_iOS/Application/SceneDelegate.swift
+- /Users/kimgeonwoo/Desktop/ReEd_iOS/Application/AppDelegate.swift

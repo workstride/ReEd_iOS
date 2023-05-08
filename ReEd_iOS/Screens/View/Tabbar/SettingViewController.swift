@@ -1,18 +1,18 @@
 //
-//  ScheduleViewController.swift
+//  SettingViewController.swift
 //  ReEd_iOS
 //
-//  Created by 김건우 on 2023/05/06.
+//  Created by 김건우 on 2023/05/07.
 //
 
 import UIKit
 
-class ScheduleViewController: UIViewController {
-    
+class SettingViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         view.backgroundColor = .white
-       
+
     }
 }
