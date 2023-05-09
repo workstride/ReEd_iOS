@@ -43,12 +43,12 @@ class TabBarController: UITabBarController {
         )
 
         // 탭 바 컨트롤러에 뷰 컨트롤러 추가
-        setViewControllers([
+        viewControllers = [
             attendanceViewController,
             scheduleViewController,
             gradeViewController,
             settingViewController
-        ], animated: false)
+        ]
         selectedIndex = 0
 
     }

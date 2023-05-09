@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         $0.layer.masksToBounds = true
     }
 
-    private let forgotPwbutton = UIButton().then {
+    private let forgotPasswordbutton = UIButton().then {
         $0.setTitle("비밀번호를 잊으셨나요?", for: .normal)
         $0.setTitleColor(.blue, for: .normal)
     }
@@ -50,58 +50,57 @@ class ViewController: UIViewController {
         view.backgroundColor = .white
         setupSubviews()
         setupConstraints()
-        loginButton.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
+        loginButton.addTarget(self, action: #selector(didTapLoginButton),
+        for: .touchUpInside)
 
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
              view.addGestureRecognizer(tapGesture)
          }
-         // 키보드를 내리는 메서드
+
          @objc private func dismissKeyboard() {
              view.endEditing(true)
          }
+    // MARK: 키보드 제스처
 
     private func setupSubviews() {
-        view.addSubview(logoImage)
-        view.addSubview(emailTextField)
-        view.addSubview(passwordTextField)
-        view.addSubview(loginButton)
-        view.addSubview(forgotPwbutton)
-
-       // [. ].forEach{ self.view.addSubview($0) }
+        [logoImage, emailTextField, passwordTextField, loginButton, forgotPasswordbutton].forEach {
+            view.addSubview($0)
+        }
     }
 
     private func setupConstraints() {
-        logoImage.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(40)
-            make.centerX.equalToSuperview()
-            make.height.equalTo(100)
-            make.width.equalTo(200)
+        logoImage.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(40)
+            $0.centerX.equalToSuperview()
+            $0.height.equalTo(100)
+            $0.width.equalTo(200)
         }
 
-        emailTextField.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(150)
-            make.leading.trailing.equalToSuperview().inset(20)
-            make.height.equalTo(44)
+        emailTextField.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(150)
+            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.height.equalTo(44)
         }
 
-        passwordTextField.snp.makeConstraints { make in
-            make.top.equalTo(emailTextField.snp.bottom).offset(20)
-            make.leading.trailing.equalToSuperview().inset(20)
-            make.height.equalTo(44)
+        passwordTextField.snp.makeConstraints {
+            $0.top.equalTo(emailTextField.snp.bottom).offset(20)
+            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.height.equalTo(44)
         }
 
-        loginButton.snp.makeConstraints { make in
-            make.top.equalTo(passwordTextField.snp.bottom).offset(30)
-            make.leading.trailing.equalToSuperview().inset(20)
-            make.height.equalTo(50)
+        loginButton.snp.makeConstraints {
+            $0.top.equalTo(passwordTextField.snp.bottom).offset(30)
+            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.height.equalTo(50)
         }
 
-        forgotPwbutton.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.top.equalTo(loginButton.snp.bottom).offset(20)
-            make.leading.trailing.equalToSuperview().inset(20)
-            make.height.equalTo(40)
+        forgotPasswordbutton.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.top.equalTo(loginButton.snp.bottom).offset(20)
+            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.height.equalTo(40)
         }
+
     }
 
     @objc private func didTapLoginButton() {
