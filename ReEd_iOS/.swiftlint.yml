@@ -5,6 +5,6 @@ disabled_rules:
 - comma
 
 excluded:
-- /Users/kimgeonwoo/Desktop/ReEd_iOS/Screens/ViewModel/LoginViewModel.swift
 - /Users/kimgeonwoo/Desktop/ReEd_iOS/Application/SceneDelegate.swift
 - /Users/kimgeonwoo/Desktop/ReEd_iOS/Application/AppDelegate.swift
+- /Users/kimgeonwoo/Desktop/ReEd_iOS/Screens/View/LocationViewController.swift

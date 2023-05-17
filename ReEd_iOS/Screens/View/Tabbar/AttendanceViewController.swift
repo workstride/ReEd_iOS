@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import SnapKit
+import Then
 
 class AttendanceViewController: UIViewController {
 
@@ -25,3 +27,4 @@ class AttendanceViewController: UIViewController {
         }
     }
 }
+// MARK: 학생 - 출석 뷰 컨트롤러

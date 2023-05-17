@@ -7,18 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5864739F2A14A125008120B4 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5864739E2A14A125008120B4 /* LocationViewController.swift */; };
+		586473A22A14A3DC008120B4 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 586473A12A14A3DC008120B4 /* RxCocoa */; };
+		586473A42A14A3DC008120B4 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 586473A32A14A3DC008120B4 /* RxRelay */; };
+		586473A62A14A3DC008120B4 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 586473A52A14A3DC008120B4 /* RxSwift */; };
 		58E573442A05843B002C709C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 58E573432A05843B002C709C /* Alamofire */; };
 		58E573472A05852A002C709C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E573462A058529002C709C /* TabBarController.swift */; };
 		58E573492A058590002C709C /* AttendanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E573482A058590002C709C /* AttendanceViewController.swift */; };
 		58E5734B2A0585AA002C709C /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E5734A2A0585AA002C709C /* ScheduleViewController.swift */; };
 		58E5734D2A0585C2002C709C /* GradeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E5734C2A0585C2002C709C /* GradeViewController.swift */; };
-		58E5734F2A064CA1002C709C /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E5734E2A064CA1002C709C /* LocationController.swift */; };
 		58E573512A064CF3002C709C /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E573502A064CF3002C709C /* LocationModel.swift */; };
 		58E573532A064DA8002C709C /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E573522A064DA8002C709C /* LocationViewModel.swift */; };
 		58E5735A2A06C9DF002C709C /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E573592A06C9DF002C709C /* SettingViewController.swift */; };
 		58E5735C2A06E583002C709C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E5735B2A06E583002C709C /* API.swift */; };
 		58E5735E2A06E6E6002C709C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E5735D2A06E6E6002C709C /* LoginViewModel.swift */; };
 		58E573642A089709002C709C /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 58E573632A089709002C709C /* .swiftlint.yml */; };
+		58E5736B2A09E0EF002C709C /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E5736A2A09E0EF002C709C /* LoginModel.swift */; };
+		58E5736D2A0A71B6002C709C /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E5736C2A0A71B6002C709C /* NoticeViewController.swift */; };
 		58EDC21A2A0568CD009CBE74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EDC2192A0568CD009CBE74 /* AppDelegate.swift */; };
 		58EDC21C2A0568CD009CBE74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EDC21B2A0568CD009CBE74 /* SceneDelegate.swift */; };
 		58EDC21E2A0568CD009CBE74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EDC21D2A0568CD009CBE74 /* ViewController.swift */; };
@@ -30,17 +35,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5864739E2A14A125008120B4 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		58E573462A058529002C709C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		58E573482A058590002C709C /* AttendanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceViewController.swift; sourceTree = "<group>"; };
 		58E5734A2A0585AA002C709C /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		58E5734C2A0585C2002C709C /* GradeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeViewController.swift; sourceTree = "<group>"; };
-		58E5734E2A064CA1002C709C /* LocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
 		58E573502A064CF3002C709C /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		58E573522A064DA8002C709C /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		58E573592A06C9DF002C709C /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		58E5735B2A06E583002C709C /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		58E5735D2A06E6E6002C709C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		58E573632A089709002C709C /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		58E5736A2A09E0EF002C709C /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		58E5736C2A0A71B6002C709C /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
 		58EDC2162A0568CD009CBE74 /* ReEd_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReEd_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58EDC2192A0568CD009CBE74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58EDC21B2A0568CD009CBE74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,8 +63,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				586473A62A14A3DC008120B4 /* RxSwift in Frameworks */,
+				586473A42A14A3DC008120B4 /* RxRelay in Frameworks */,
 				58E573442A05843B002C709C /* Alamofire in Frameworks */,
 				58EDC22F2A056A7D009CBE74 /* Then in Frameworks */,
+				586473A22A14A3DC008120B4 /* RxCocoa in Frameworks */,
 				58EDC2322A056AB1009CBE74 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,6 +83,7 @@
 				58E5734A2A0585AA002C709C /* ScheduleViewController.swift */,
 				58E5734C2A0585C2002C709C /* GradeViewController.swift */,
 				58E573592A06C9DF002C709C /* SettingViewController.swift */,
+				58E5736C2A0A71B6002C709C /* NoticeViewController.swift */,
 			);
 			path = Tabbar;
 			sourceTree = "<group>";
@@ -155,6 +166,7 @@
 			children = (
 				58E573502A064CF3002C709C /* LocationModel.swift */,
 				58E5735B2A06E583002C709C /* API.swift */,
+				58E5736A2A09E0EF002C709C /* LoginModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -173,7 +185,7 @@
 			children = (
 				58E573452A0584F0002C709C /* Tabbar */,
 				58EDC21D2A0568CD009CBE74 /* ViewController.swift */,
-				58E5734E2A064CA1002C709C /* LocationController.swift */,
+				5864739E2A14A125008120B4 /* LocationViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -207,6 +219,9 @@
 				58EDC22E2A056A7D009CBE74 /* Then */,
 				58EDC2312A056AB1009CBE74 /* SnapKit */,
 				58E573432A05843B002C709C /* Alamofire */,
+				586473A12A14A3DC008120B4 /* RxCocoa */,
+				586473A32A14A3DC008120B4 /* RxRelay */,
+				586473A52A14A3DC008120B4 /* RxSwift */,
 			);
 			productName = ReEd_iOS;
 			productReference = 58EDC2162A0568CD009CBE74 /* ReEd_iOS.app */;
@@ -240,6 +255,7 @@
 				58EDC22D2A056A7D009CBE74 /* XCRemoteSwiftPackageReference "Then" */,
 				58EDC2302A056AB1009CBE74 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				58E573422A05843B002C709C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				586473A02A14A3DC008120B4 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 58EDC2172A0568CD009CBE74 /* Products */;
 			projectDirPath = "";
@@ -290,9 +306,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5864739F2A14A125008120B4 /* LocationViewController.swift in Sources */,
 				58E573512A064CF3002C709C /* LocationModel.swift in Sources */,
-				58E5734F2A064CA1002C709C /* LocationController.swift in Sources */,
+				58E5736B2A09E0EF002C709C /* LoginModel.swift in Sources */,
 				58E5734B2A0585AA002C709C /* ScheduleViewController.swift in Sources */,
+				58E5736D2A0A71B6002C709C /* NoticeViewController.swift in Sources */,
 				58E573532A064DA8002C709C /* LocationViewModel.swift in Sources */,
 				58E573492A058590002C709C /* AttendanceViewController.swift in Sources */,
 				58EDC21E2A0568CD009CBE74 /* ViewController.swift in Sources */,
@@ -514,6 +532,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		586473A02A14A3DC008120B4 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 		58E573422A05843B002C709C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -541,6 +567,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		586473A12A14A3DC008120B4 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 586473A02A14A3DC008120B4 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		586473A32A14A3DC008120B4 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 586473A02A14A3DC008120B4 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		586473A52A14A3DC008120B4 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 586473A02A14A3DC008120B4 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
 		58E573432A05843B002C709C /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 58E573422A05843B002C709C /* XCRemoteSwiftPackageReference "Alamofire" */;

@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import SnapKit
+import Then
 
 class ScheduleViewController: UIViewController {
 
@@ -13,6 +15,16 @@ class ScheduleViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = .white
+        let helloLabel = UILabel()
+        helloLabel.text = "World!"
+        helloLabel.textColor = .black
+        helloLabel.font = UIFont.systemFont(ofSize: 24, weight: .bold)
+        helloLabel.textAlignment = .center
+        view.addSubview(helloLabel)
 
+        helloLabel.snp.makeConstraints {
+            $0.center.equalToSuperview()
+        }
     }
 }
+// MARK: 선생 - 학생 일정관리 

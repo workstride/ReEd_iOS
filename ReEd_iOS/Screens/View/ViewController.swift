@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 import Then
-
+// MARK: 5/2 - 코드 가독성 추가 
 class ViewController: UIViewController {
 
     private let logoImage = UIImageView().then {
@@ -75,24 +75,28 @@ class ViewController: UIViewController {
             $0.height.equalTo(100)
             $0.width.equalTo(200)
         }
+        // MARK: 로고
 
         emailTextField.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(150)
             $0.leading.trailing.equalToSuperview().inset(20)
             $0.height.equalTo(44)
         }
+        // MARK: 이메일 필드
 
         passwordTextField.snp.makeConstraints {
             $0.top.equalTo(emailTextField.snp.bottom).offset(20)
             $0.leading.trailing.equalToSuperview().inset(20)
             $0.height.equalTo(44)
         }
+        // MARK: 패스워드 필드
 
         loginButton.snp.makeConstraints {
             $0.top.equalTo(passwordTextField.snp.bottom).offset(30)
             $0.leading.trailing.equalToSuperview().inset(20)
             $0.height.equalTo(50)
         }
+        // MARK: 로그인 버튼 필드
 
         forgotPasswordbutton.snp.makeConstraints {
             $0.centerX.equalToSuperview()
@@ -100,6 +104,7 @@ class ViewController: UIViewController {
             $0.leading.trailing.equalToSuperview().inset(20)
             $0.height.equalTo(40)
         }
+        // MARK: 비밀번호 잃어버림 버튼
 
     }
 

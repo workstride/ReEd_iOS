@@ -16,9 +16,10 @@ class TabBarController: UITabBarController {
         let scheduleViewController = ScheduleViewController()
         let gradeViewController = GradeViewController()
         let settingViewController = SettingViewController()
+        let noticeViewController = NoticeViewController()
 
         // 탭 바 아이템 설정
-        attendanceViewController.tabBarItem = UITabBarItem(
+        noticeViewController.tabBarItem = UITabBarItem(
             title: nil,
             image: UIImage(systemName: "house"),
             tag: 0
@@ -44,7 +45,7 @@ class TabBarController: UITabBarController {
 
         // 탭 바 컨트롤러에 뷰 컨트롤러 추가
         viewControllers = [
-            attendanceViewController,
+            noticeViewController,
             scheduleViewController,
             gradeViewController,
             settingViewController

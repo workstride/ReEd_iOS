@@ -1,8 +1,40 @@
-//
-//  LocationViewModel.swift
-//  ReEd_iOS
-//
-//  Created by 김건우 on 2023/05/06.
-//
+import UIKit
+import MapKit
+import RxSwift
+import RxCocoa
 
-import Foundation
+class LocationViewModel: NSObject, CLLocationManagerDelegate {
+    static let shared = LocationViewModel()
+
+    private let locationManager = CLLocationManager()
+    private let currentLocationSubject = PublishSubject<CLLocation?>()
+    private var destination: String?
+
+    var currentLocation: Observable<CLLocation?> {
+        return currentLocationSubject.asObservable()
+    }
+
+    private override init() {
+        super.init()
+        locationManager.delegate = self
+    }
+
+    func requestLocationPermission() {
+        locationManager.requestWhenInUseAuthorization()
+    }
+
+    func startUpdatingLocation() {
+        locationManager.startUpdatingLocation()
+    }
+
+    func setDestination(_ destination: String) {
+        self.destination = destination
+    }
+
+    // CLLocationManagerDelegate methods
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last {
+            currentLocationSubject.onNext(location)
+        }
+    }
+}
