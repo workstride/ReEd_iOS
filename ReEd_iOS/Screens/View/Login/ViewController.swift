@@ -53,9 +53,13 @@ class ViewController: UIViewController {
         loginButton.addTarget(self, action: #selector(didTapLoginButton),
         for: .touchUpInside)
 
+        forgotPasswordbutton.addTarget(self, action: #selector(didTapforgotPasdwordbutton),
+        for: .touchUpInside)
+
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
              view.addGestureRecognizer(tapGesture)
          }
+
 
          @objc private func dismissKeyboard() {
              view.endEditing(true)
@@ -116,5 +120,13 @@ class ViewController: UIViewController {
             UIApplication.shared.windows.first?.rootViewController = tabbarController
         }
 
+    }
+    @objc private func didTapforgotPasdwordbutton() {
+
+        let joinViewController = JoinViewController()
+
+        dismiss(animated: true) {
+            UIApplication.shared.windows.first?.rootViewController = joinViewController
+        }
     }
 }

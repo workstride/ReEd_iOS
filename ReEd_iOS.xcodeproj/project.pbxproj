@@ -11,6 +11,7 @@
 		586473A22A14A3DC008120B4 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 586473A12A14A3DC008120B4 /* RxCocoa */; };
 		586473A42A14A3DC008120B4 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 586473A32A14A3DC008120B4 /* RxRelay */; };
 		586473A62A14A3DC008120B4 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 586473A52A14A3DC008120B4 /* RxSwift */; };
+		586473A92A15EFFD008120B4 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586473A82A15EFFD008120B4 /* JoinViewController.swift */; };
 		58E573442A05843B002C709C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 58E573432A05843B002C709C /* Alamofire */; };
 		58E573472A05852A002C709C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E573462A058529002C709C /* TabBarController.swift */; };
 		58E573492A058590002C709C /* AttendanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E573482A058590002C709C /* AttendanceViewController.swift */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		5864739E2A14A125008120B4 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		586473A82A15EFFD008120B4 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		58E573462A058529002C709C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		58E573482A058590002C709C /* AttendanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceViewController.swift; sourceTree = "<group>"; };
 		58E5734A2A0585AA002C709C /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		586473A72A15EFDB008120B4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				58EDC21D2A0568CD009CBE74 /* ViewController.swift */,
+				586473A82A15EFFD008120B4 /* JoinViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		58E573452A0584F0002C709C /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,8 +194,8 @@
 		58EDC23D2A057F53009CBE74 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				586473A72A15EFDB008120B4 /* Login */,
 				58E573452A0584F0002C709C /* Tabbar */,
-				58EDC21D2A0568CD009CBE74 /* ViewController.swift */,
 				5864739E2A14A125008120B4 /* LocationViewController.swift */,
 			);
 			path = View;
@@ -308,6 +319,7 @@
 			files = (
 				5864739F2A14A125008120B4 /* LocationViewController.swift in Sources */,
 				58E573512A064CF3002C709C /* LocationModel.swift in Sources */,
+				586473A92A15EFFD008120B4 /* JoinViewController.swift in Sources */,
 				58E5736B2A09E0EF002C709C /* LoginModel.swift in Sources */,
 				58E5734B2A0585AA002C709C /* ScheduleViewController.swift in Sources */,
 				58E5736D2A0A71B6002C709C /* NoticeViewController.swift in Sources */,

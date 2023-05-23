@@ -3,6 +3,7 @@ disabled_rules:
 - trailing_whitespace
 - mark
 - comma
+- function_body_length
 
 excluded:
 - /Users/kimgeonwoo/Desktop/ReEd_iOS/Application/SceneDelegate.swift
