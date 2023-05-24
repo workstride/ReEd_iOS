@@ -8,8 +8,8 @@
 import UIKit
 import SnapKit
 import Then
-// MARK: 5/2 - 코드 가독성 추가 
-class ViewController: UIViewController {
+
+class ViewController: UIViewController, UITextFieldDelegate {
 
     private let logoImage = UIImageView().then {
         $0.image = UIImage(named: "logo")
@@ -43,28 +43,25 @@ class ViewController: UIViewController {
         $0.setTitle("비밀번호를 잊으셨나요?", for: .normal)
         $0.setTitleColor(.blue, for: .normal)
     }
-    // MARK: 로그인 UI
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .white
         setupSubviews()
         setupConstraints()
-        loginButton.addTarget(self, action: #selector(didTapLoginButton),
-        for: .touchUpInside)
-
-        forgotPasswordbutton.addTarget(self, action: #selector(didTapforgotPasdwordbutton),
-        for: .touchUpInside)
-
+        loginButton.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
+        forgotPasswordbutton.addTarget(self, action: #selector(didTapforgotPasdwordbutton), for: .touchUpInside)
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-             view.addGestureRecognizer(tapGesture)
-         }
+        view.addGestureRecognizer(tapGesture)
 
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+    }
 
-         @objc private func dismissKeyboard() {
-             view.endEditing(true)
-         }
-    // MARK: 키보드 제스처
+    @objc private func dismissKeyboard() {
+        view.endEditing(true)
+    }
 
     private func setupSubviews() {
         [logoImage, emailTextField, passwordTextField, loginButton, forgotPasswordbutton].forEach {
@@ -79,28 +76,24 @@ class ViewController: UIViewController {
             $0.height.equalTo(100)
             $0.width.equalTo(200)
         }
-        // MARK: 로고
 
         emailTextField.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(150)
             $0.leading.trailing.equalToSuperview().inset(20)
             $0.height.equalTo(44)
         }
-        // MARK: 이메일 필드
 
         passwordTextField.snp.makeConstraints {
             $0.top.equalTo(emailTextField.snp.bottom).offset(20)
             $0.leading.trailing.equalToSuperview().inset(20)
             $0.height.equalTo(44)
         }
-        // MARK: 패스워드 필드
 
         loginButton.snp.makeConstraints {
             $0.top.equalTo(passwordTextField.snp.bottom).offset(30)
             $0.leading.trailing.equalToSuperview().inset(20)
             $0.height.equalTo(50)
         }
-        // MARK: 로그인 버튼 필드
 
         forgotPasswordbutton.snp.makeConstraints {
             $0.centerX.equalToSuperview()
@@ -108,25 +101,32 @@ class ViewController: UIViewController {
             $0.leading.trailing.equalToSuperview().inset(20)
             $0.height.equalTo(40)
         }
-        // MARK: 비밀번호 잃어버림 버튼
-
     }
 
     @objc private func didTapLoginButton() {
-
         let tabbarController = TabBarController()
-
         dismiss(animated: true) {
             UIApplication.shared.windows.first?.rootViewController = tabbarController
         }
-
     }
+
     @objc private func didTapforgotPasdwordbutton() {
-
         let joinViewController = JoinViewController()
-
         dismiss(animated: true) {
             UIApplication.shared.windows.first?.rootViewController = joinViewController
         }
+    }
+
+    // MARK: UITextFieldDelegate
+
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let text = textField.text else {
+            return true
+        }
+
+        let maxLength = 8
+
+        let newLength = text.count + string.count - range.length
+        return newLength <= maxLength
     }
 }

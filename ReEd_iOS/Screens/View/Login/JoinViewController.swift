@@ -46,7 +46,7 @@ class JoinViewController: UIViewController {
             $0.width.equalTo(200)
         }
 
-        telTextField.snp.makeConstraints{
+        telTextField.snp.makeConstraints {
             $0.top.equalTo(forgotPWTextField.snp.bottom).offset(20)
             $0.leading.trailing.equalToSuperview().inset(20)
             $0.height.equalTo(44)

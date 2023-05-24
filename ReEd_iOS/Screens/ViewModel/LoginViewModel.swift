@@ -8,7 +8,15 @@ import RxSwift
 import RxRelay
 
 class LoginViewModel {
-    let memberId = BehaviorRelay<String>(value: "")
-    let memberPassword = BehaviorRelay<String>(value: "")
-    
+    let idObservable = BehaviorRelay<String>(value: "")
+    let passwordObservable = BehaviorRelay<String>(value: "")
+
+    var isValid: Observable<Bool> {
+        return Observable.combineLatest(idObservable,passwordObservable)
+            .map { email, password in
+                print("Email : \(email), Password : \(password)")
+                return !email.isEmpty && email.contains("@") && email.contains(".") && password.count > 0
+            }
+    }
+
 }
