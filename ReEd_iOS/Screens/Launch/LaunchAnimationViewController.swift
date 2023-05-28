@@ -18,7 +18,7 @@ class LaunchAnimationViewController: UIViewController {
     }
     
     private func loadAnimation() {
-        let animation = LottieAnimation.named("")
+        let animation = LottieAnimation.named("flip_bookloader")
         animationView = LottieAnimationView(animation: animation)
         
         // 원하는 크기로 애니메이션 뷰의 프레임을 설정합니다.
