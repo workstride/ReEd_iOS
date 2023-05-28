@@ -12,6 +12,8 @@
 		586473A42A14A3DC008120B4 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 586473A32A14A3DC008120B4 /* RxRelay */; };
 		586473A62A14A3DC008120B4 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 586473A52A14A3DC008120B4 /* RxSwift */; };
 		586473A92A15EFFD008120B4 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586473A82A15EFFD008120B4 /* JoinViewController.swift */; };
+		586F3E932A23BCEA0036CB6C /* CustomLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586F3E922A23BCEA0036CB6C /* CustomLoadingView.swift */; };
+		586F3E952A23BD3C0036CB6C /* Customloading.json in Resources */ = {isa = PBXBuildFile; fileRef = 586F3E942A23BD3C0036CB6C /* Customloading.json */; };
 		58D75C3E2A1E2F3D00D80066 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 58D75C3D2A1E2F3D00D80066 /* Lottie */; };
 		58D75C402A1E30A700D80066 /* LaunchAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D75C3F2A1E30A700D80066 /* LaunchAnimationViewController.swift */; };
 		58D75C422A1E526200D80066 /* flip_bookloader.json in Resources */ = {isa = PBXBuildFile; fileRef = 58D75C412A1E526200D80066 /* flip_bookloader.json */; };
@@ -41,6 +43,8 @@
 /* Begin PBXFileReference section */
 		5864739E2A14A125008120B4 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		586473A82A15EFFD008120B4 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
+		586F3E922A23BCEA0036CB6C /* CustomLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoadingView.swift; sourceTree = "<group>"; };
+		586F3E942A23BD3C0036CB6C /* Customloading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Customloading.json; path = ../../../../Downloads/Customloading.json; sourceTree = "<group>"; };
 		58D75C3F2A1E30A700D80066 /* LaunchAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAnimationViewController.swift; sourceTree = "<group>"; };
 		58D75C412A1E526200D80066 /* flip_bookloader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = flip_bookloader.json; path = ../../../../Downloads/flip_bookloader.json; sourceTree = "<group>"; };
 		58E573462A058529002C709C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -154,6 +158,7 @@
 		58EDC2372A057ED2009CBE74 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				586F3E922A23BCEA0036CB6C /* CustomLoadingView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -172,6 +177,7 @@
 		58EDC2392A057EF4009CBE74 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				586F3E942A23BD3C0036CB6C /* Customloading.json */,
 				58D75C412A1E526200D80066 /* flip_bookloader.json */,
 				58EDC23F2A057FE3009CBE74 /* logo.png */,
 				58EDC2222A0568CE009CBE74 /* Assets.xcassets */,
@@ -292,6 +298,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				586F3E952A23BD3C0036CB6C /* Customloading.json in Resources */,
 				58E573642A089709002C709C /* .swiftlint.yml in Resources */,
 				58EDC2402A057FE3009CBE74 /* logo.png in Resources */,
 				58D75C422A1E526200D80066 /* flip_bookloader.json in Resources */,
@@ -344,6 +351,7 @@
 				58E573472A05852A002C709C /* TabBarController.swift in Sources */,
 				58EDC21A2A0568CD009CBE74 /* AppDelegate.swift in Sources */,
 				58E5735C2A06E583002C709C /* API.swift in Sources */,
+				586F3E932A23BCEA0036CB6C /* CustomLoadingView.swift in Sources */,
 				58EDC21C2A0568CD009CBE74 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
