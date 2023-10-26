@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="사각형_1" data-name="사각형 1" class="cls-1" d="M4.1,1.251L28.749,25.9,25.9,28.749,1.251,4.1Z"/>
+  <path id="사각형_1_복사" data-name="사각형 1 복사" class="cls-1" d="M25.9,1.251L1.251,25.9,4.1,28.749,28.749,4.1Z"/>
+</svg>
