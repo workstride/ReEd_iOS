@@ -90,6 +90,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0B0DD5FA2AEFDF5300D23B99 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		580A18012ADFCA8200CAC0EF /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		5814A1702AEACFB100021D22 /* QRCodeScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScanViewController.swift; sourceTree = "<group>"; };
 		5814A1732AEBCD0800021D22 /* Affilation_SelectRoleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Affilation_SelectRoleViewController.swift; sourceTree = "<group>"; };
@@ -230,6 +231,7 @@
 				58331E932AD694A200BF0933 /* Domain */,
 				58331E942AD694C700BF0933 /* Presentation */,
 				58331E972AD6959B00BF0933 /* Resources */,
+				0B0DD5FA2AEFDF5300D23B99 /* Development.xcconfig */,
 			);
 			path = ReEd;
 			sourceTree = "<group>";
@@ -498,7 +500,7 @@
 		58331E4F2AD6923D00BF0933 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = 1;
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
@@ -661,6 +663,7 @@
 /* Begin XCBuildConfiguration section */
 		58331E7F2AD6923E00BF0933 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B0DD5FA2AEFDF5300D23B99 /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -793,6 +796,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ReEd/Resources/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NFCReaderUsageDescription = "NFC 리더기를 사용하여 NFC 태그를 읽을 권한에 동의해주세요";
+				INFOPLIST_KEY_NSCameraUsageDescription = "카메라 접근에 동의해주세요";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -828,6 +833,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ReEd/Resources/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NFCReaderUsageDescription = "NFC 리더기를 사용하여 NFC 태그를 읽을 권한에 동의해주세요";
+				INFOPLIST_KEY_NSCameraUsageDescription = "카메라 접근에 동의해주세요";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -934,7 +941,7 @@
 				58331E802AD6923E00BF0933 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		58331E812AD6923E00BF0933 /* Build configuration list for PBXNativeTarget "ReEd" */ = {
 			isa = XCConfigurationList;
@@ -943,7 +950,7 @@
 				58331E832AD6923E00BF0933 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		58331E842AD6923E00BF0933 /* Build configuration list for PBXNativeTarget "ReEdTests" */ = {
 			isa = XCConfigurationList;
@@ -952,7 +959,7 @@
 				58331E862AD6923E00BF0933 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		58331E872AD6923E00BF0933 /* Build configuration list for PBXNativeTarget "ReEdUITests" */ = {
 			isa = XCConfigurationList;
@@ -961,7 +968,7 @@
 				58331E892AD6923E00BF0933 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 
