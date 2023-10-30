@@ -24,7 +24,7 @@ class SideViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
-        // 사이드 메뉴 옵션을 처리합니다.
+        
         if indexPath.row == 0 {
             // 공지사항 선택 시 처리
             // 여기에 공지사항 관련 코드 추가
@@ -33,7 +33,6 @@ class SideViewController: UITableViewController {
             // 여기에 로그아웃 관련 코드 추가
         }
 
-        // 사이드 메뉴를 닫습니다.
         dismiss(animated: true, completion: nil)
     }
 }

@@ -10,24 +10,24 @@ import Foundation
 struct UserInfoResponse: Codable {
     let id: Int
     let email: String
-    let gender: gender
+    let gender: Gender
     let birth: String
     let name: String
     let tel: String
-    let role: role
+    let role: Role
     let regDate: Date
-}
 
-enum gender: String, Codable {
-    case female = "FEMALE"
-    case male = "MALE"
-}
+    enum Gender: String, Codable {
+        case female = "FEMALE"
+        case male = "MALE"
+    }
 
-enum role: String, Codable{
-    case student = "STUDENT"
-    case parent =  "PARENT"
-    case teacher = "TEACHER"
-    case Head_teacher = "HEAD_TEACHER"
-    case manager = "MANAGER"
-    case admin = "ADMIN"
+    enum Role: String, Codable {
+        case student = "STUDENT"
+        case parent = "PARENT"
+        case teacher = "TEACHER"
+        case headTeacher = "HEAD_TEACHER"
+        case manager = "MANAGER"
+        case admin = "ADMIN"
+    }
 }

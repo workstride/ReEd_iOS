@@ -149,20 +149,19 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 print("role: \(loginResponse.role)")
                 
                 DispatchQueue.main.async {
-                    let userAttendenceVC = UserAttendanceViewController()
-                    self.dismiss(animated: true) {
-                        UIApplication.shared.windows.first?.rootViewController =
-                        userAttendenceVC
-                    }
+                    let attendanceVC = AttendanceViewController()
+                    // 여기서 뒤로가기 버튼을 숨기기
+                    attendanceVC.navigationItem.hidesBackButton = true
+                    self.navigationController?.setViewControllers([attendanceVC], animated: true)
                 }
                 
             case .failure(let error):
                 self.showAlert(message: "아이디 또는 비밀번호가 틀렸습니다.")
                 print("로그인 실패. 오류: \(error)")
-                
             }
         }
     }
+
     
     // MARK: - 로그인 버튼 및 로그인 서버 요청
     @objc private func didTapforgotPasdwordbutton() {

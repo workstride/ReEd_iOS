@@ -80,7 +80,9 @@ extension LoginSelectViewController {
     }
     
     @objc private func didTapLoginButton() {
-        navigationController?.pushViewController(LoginViewController(), animated: true)
+        let LoginVC = LoginViewController()
+        LoginVC.navigationItem.hidesBackButton = true
+        self.navigationController?.setViewControllers([LoginVC], animated: true)
     }
         
 }

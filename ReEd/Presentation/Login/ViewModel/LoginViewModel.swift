@@ -25,7 +25,7 @@ class LoginViewModel {
                     self.loginCompletion?(.success(loginResponse))
                     
                     // 로그인 정보를 키체인에 저장
-                    KeychainManager.shared.saveLoginInfo(email: loginRequest.email, token: loginResponse.accessToken)
+                    KeychainManager.shared.saveLoginInfo(email: loginRequest.email, token: loginResponse.accessToken, role: loginResponse.role)
                 case .failure(let error):
                     // 실패 시 오류를 클로저를 통해 전달
                     self.loginCompletion?(.failure(error))
