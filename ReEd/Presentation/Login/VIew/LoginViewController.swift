@@ -138,6 +138,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         loginRequest.email = emailTextField.text ?? ""
         loginRequest.pw = passwordTextField.text ?? ""
         
+        
         loginViewModel.loginUser(loginRequest: loginRequest)
         
         loginViewModel.loginCompletion = { result in
