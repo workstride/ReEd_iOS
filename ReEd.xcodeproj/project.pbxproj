@@ -52,6 +52,7 @@
 		589FBD4E2AD6C20000EBF951 /* LoginSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589FBD4D2AD6C20000EBF951 /* LoginSelectViewController.swift */; };
 		589FBD532AD6C2E900EBF951 /* AttendanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589FBD522AD6C2E900EBF951 /* AttendanceViewController.swift */; };
 		58AC49C72AD6B3710089C900 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 58AC49C62AD6B3710089C900 /* SnapKit */; };
+		58CDD55A2AEFFA2000E6415D /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CDD5592AEFFA2000E6415D /* Loading.swift */; };
 		58DE90282AE9026A001AED6E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58DE90272AE9026A001AED6E /* GoogleService-Info.plist */; };
 		58EF1E012AD7648000F96E2D /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 58EF1E002AD7648000F96E2D /* RxSwift */; };
 		58EF1E032AD7648800F96E2D /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 58EF1E022AD7648800F96E2D /* RxCocoa */; };
@@ -133,6 +134,7 @@
 		589FBD4B2AD6BEF400EBF951 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		589FBD4D2AD6C20000EBF951 /* LoginSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSelectViewController.swift; sourceTree = "<group>"; };
 		589FBD522AD6C2E900EBF951 /* AttendanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceViewController.swift; sourceTree = "<group>"; };
+		58CDD5592AEFFA2000E6415D /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
 		58DE90262AE9012D001AED6E /* ReEd.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ReEd.entitlements; sourceTree = "<group>"; };
 		58DE90272AE9026A001AED6E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		58F5F59A2AE23D930059A9BB /* UserInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
@@ -357,6 +359,7 @@
 				589FBD482AD6BE1200EBF951 /* HexCode.swift */,
 				5814A17D2AEBE49600021D22 /* StudentInfoTextField.swift */,
 				5814A1852AEC207A00021D22 /* DataFormatter.swift */,
+				58CDD5592AEFFA2000E6415D /* Loading.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -599,6 +602,7 @@
 				5871F8862AD8DB1400C8F41D /* SideViewController.swift in Sources */,
 				589FBD472AD6BDEC00EBF951 /* UIViewController.swift in Sources */,
 				589FBD452AD6BDA900EBF951 /* Coordinator.swift in Sources */,
+				58CDD55A2AEFFA2000E6415D /* Loading.swift in Sources */,
 				5814A1762AEBCD4C00021D22 /* Affilation_InputEmailViewController.swift in Sources */,
 				58F5F59D2AE247DB0059A9BB /* UserProfileViewModel.swift in Sources */,
 				5814A1782AEBCDB300021D22 /* AffilationViewModel.swift in Sources */,

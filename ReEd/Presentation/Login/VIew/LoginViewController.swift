@@ -135,13 +135,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc private func didTapLoginButton() {
+        
         loginRequest.email = emailTextField.text ?? ""
         loginRequest.pw = passwordTextField.text ?? ""
         
-        
+        showLoadingIndicator()
         loginViewModel.loginUser(loginRequest: loginRequest)
         
         loginViewModel.loginCompletion = { result in
+            self.hideLoadingIndicator()
+            
             switch result {
             case .success(let loginResponse):
                 // 로그인 성공 시 처리
