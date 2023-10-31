@@ -14,7 +14,6 @@
 		5814A1782AEBCDB300021D22 /* AffilationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5814A1772AEBCDB300021D22 /* AffilationViewModel.swift */; };
 		5814A17C2AEBE3B400021D22 /* Affilation_InputStudentInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5814A17B2AEBE3B400021D22 /* Affilation_InputStudentInfoViewController.swift */; };
 		5814A17E2AEBE49600021D22 /* StudentInfoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5814A17D2AEBE49600021D22 /* StudentInfoTextField.swift */; };
-		5814A1802AEBFAEC00021D22 /* NFCScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5814A17F2AEBFAEC00021D22 /* NFCScanViewController.swift */; };
 		5814A1822AEC16BE00021D22 /* AttendanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5814A1812AEC16BE00021D22 /* AttendanceModel.swift */; };
 		5814A1842AEC193100021D22 /* QRCodeScanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5814A1832AEC193100021D22 /* QRCodeScanViewModel.swift */; };
 		5814A1862AEC207B00021D22 /* DataFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5814A1852AEC207A00021D22 /* DataFormatter.swift */; };
@@ -51,8 +50,10 @@
 		589FBD4C2AD6BEF400EBF951 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589FBD4B2AD6BEF400EBF951 /* CheckBox.swift */; };
 		589FBD4E2AD6C20000EBF951 /* LoginSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589FBD4D2AD6C20000EBF951 /* LoginSelectViewController.swift */; };
 		589FBD532AD6C2E900EBF951 /* AttendanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589FBD522AD6C2E900EBF951 /* AttendanceViewController.swift */; };
+		58A8FA3A2AF0BFC6004CCC0B /* NFCScanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A8FA392AF0BFC6004CCC0B /* NFCScanViewModel.swift */; };
 		58AC49C72AD6B3710089C900 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 58AC49C62AD6B3710089C900 /* SnapKit */; };
 		58CDD55A2AEFFA2000E6415D /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CDD5592AEFFA2000E6415D /* Loading.swift */; };
+		58CDD55C2AF0775800E6415D /* QRCodeGenerateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CDD55B2AF0775800E6415D /* QRCodeGenerateViewModel.swift */; };
 		58DE90282AE9026A001AED6E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58DE90272AE9026A001AED6E /* GoogleService-Info.plist */; };
 		58EF1E012AD7648000F96E2D /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 58EF1E002AD7648000F96E2D /* RxSwift */; };
 		58EF1E032AD7648800F96E2D /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 58EF1E022AD7648800F96E2D /* RxCocoa */; };
@@ -99,7 +100,6 @@
 		5814A1772AEBCDB300021D22 /* AffilationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffilationViewModel.swift; sourceTree = "<group>"; };
 		5814A17B2AEBE3B400021D22 /* Affilation_InputStudentInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Affilation_InputStudentInfoViewController.swift; sourceTree = "<group>"; };
 		5814A17D2AEBE49600021D22 /* StudentInfoTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentInfoTextField.swift; sourceTree = "<group>"; };
-		5814A17F2AEBFAEC00021D22 /* NFCScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCScanViewController.swift; sourceTree = "<group>"; };
 		5814A1812AEC16BE00021D22 /* AttendanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceModel.swift; sourceTree = "<group>"; };
 		5814A1832AEC193100021D22 /* QRCodeScanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScanViewModel.swift; sourceTree = "<group>"; };
 		5814A1852AEC207A00021D22 /* DataFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFormatter.swift; sourceTree = "<group>"; };
@@ -134,7 +134,9 @@
 		589FBD4B2AD6BEF400EBF951 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		589FBD4D2AD6C20000EBF951 /* LoginSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSelectViewController.swift; sourceTree = "<group>"; };
 		589FBD522AD6C2E900EBF951 /* AttendanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceViewController.swift; sourceTree = "<group>"; };
+		58A8FA392AF0BFC6004CCC0B /* NFCScanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCScanViewModel.swift; sourceTree = "<group>"; };
 		58CDD5592AEFFA2000E6415D /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
+		58CDD55B2AF0775800E6415D /* QRCodeGenerateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeGenerateViewModel.swift; sourceTree = "<group>"; };
 		58DE90262AE9012D001AED6E /* ReEd.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ReEd.entitlements; sourceTree = "<group>"; };
 		58DE90272AE9026A001AED6E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		58F5F59A2AE23D930059A9BB /* UserInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
@@ -211,7 +213,6 @@
 				58331E702AD6923E00BF0933 /* ReEdTests */,
 				58331E7A2AD6923E00BF0933 /* ReEdUITests */,
 				58331E582AD6923D00BF0933 /* Products */,
-				58B10F862ADECE93001A0E37 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -389,7 +390,6 @@
 			children = (
 				589FBD522AD6C2E900EBF951 /* AttendanceViewController.swift */,
 				5814A1702AEACFB100021D22 /* QRCodeScanViewController.swift */,
-				5814A17F2AEBFAEC00021D22 /* NFCScanViewController.swift */,
 				5814A18E2AED891D00021D22 /* QRCodeGenerateViewController.swift */,
 			);
 			path = View;
@@ -400,6 +400,8 @@
 			children = (
 				58F5F59C2AE247DB0059A9BB /* UserProfileViewModel.swift */,
 				5814A1832AEC193100021D22 /* QRCodeScanViewModel.swift */,
+				58CDD55B2AF0775800E6415D /* QRCodeGenerateViewModel.swift */,
+				58A8FA392AF0BFC6004CCC0B /* NFCScanViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -420,13 +422,6 @@
 				5814A1812AEC16BE00021D22 /* AttendanceModel.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		58B10F862ADECE93001A0E37 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -585,14 +580,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				589FBD3D2AD6B4CB00EBF951 /* LoginViewModel.swift in Sources */,
+				58A8FA3A2AF0BFC6004CCC0B /* NFCScanViewModel.swift in Sources */,
 				589FBD402AD6BC2500EBF951 /* Login.swift in Sources */,
-				5814A1802AEBFAEC00021D22 /* NFCScanViewController.swift in Sources */,
 				589FBD492AD6BE1200EBF951 /* HexCode.swift in Sources */,
 				58331E5F2AD6923D00BF0933 /* LoginViewController.swift in Sources */,
 				589FBD4E2AD6C20000EBF951 /* LoginSelectViewController.swift in Sources */,
 				589FBD4C2AD6BEF400EBF951 /* CheckBox.swift in Sources */,
 				5814A18F2AED891D00021D22 /* QRCodeGenerateViewController.swift in Sources */,
 				5814A17C2AEBE3B400021D22 /* Affilation_InputStudentInfoViewController.swift in Sources */,
+				58CDD55C2AF0775800E6415D /* QRCodeGenerateViewModel.swift in Sources */,
 				58331E5B2AD6923D00BF0933 /* AppDelegate.swift in Sources */,
 				58331E5D2AD6923D00BF0933 /* SceneDelegate.swift in Sources */,
 				589FBD432AD6BD1D00EBF951 /* PlaceHolder.swift in Sources */,

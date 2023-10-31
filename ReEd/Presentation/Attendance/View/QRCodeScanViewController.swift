@@ -119,11 +119,23 @@ class QRCodeScanViewController: UIViewController, AVCaptureMetadataOutputObjects
                         UIApplication.shared.windows.first?.rootViewController = AttendanceViewController()
                     }
                 }
+                
                 alertController.addAction(okAction)
                 self?.present(alertController, animated: true, completion: nil)
             case .failure(let error):
                 // 서버 요청 실패 처리
                 print("서버 요청 실패: \(error)")
+                
+                let alertController = UIAlertController(title: "인증 실패", message: nil, preferredStyle: .alert)
+                
+                let closeAction = UIAlertAction(title: "닫기", style: .default) { _ in
+                    self?.dismiss(animated: true) {
+                        UIApplication.shared.windows.first?.rootViewController = AttendanceViewController()
+                    }
+                }
+                
+                alertController.addAction(closeAction)
+                self?.present(alertController, animated: true, completion: nil)
             }
         }
     }

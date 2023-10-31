@@ -12,10 +12,13 @@ import SkeletonView
 import SnapKit
 import Then
 import UIKit
+import CoreNFC
 
-class AttendanceViewController: UIViewController {
+class AttendanceViewController: UIViewController, NFCNDEFReaderSessionDelegate {
     
     let keychainManager_role = KeychainManager.shared.getLoginInfo().role
+    
+    let viewModel = NFCScanViewModel()
     
     var isSideMenuVisible = false
     
@@ -286,6 +289,7 @@ class AttendanceViewController: UIViewController {
         if keychainManager_role == "TEACHER" {
             navigationController?.pushViewController(QRCodeScanViewController(), animated: true)
         }
+        
         if keychainManager_role == "STUDENT" {
             navigationController?.pushViewController(QRCodeScanViewController(), animated: true)
         }
@@ -293,8 +297,37 @@ class AttendanceViewController: UIViewController {
     
     // nfcView를 터치했을 때 호출되는 함수
     @objc func nfcTapped() {
-        // 여기에 nfcView를 터치했을 때 수행할 작업을 추가
-        print("NFC View Tapped")
+        // NFC 세션을 시작합니다.
+        guard NFCNDEFReaderSession.readingAvailable else {
+            return
+        }
+        
+        let session = NFCNDEFReaderSession(delegate: self, queue: nil, invalidateAfterFirstRead: false)
+        session.begin()
+    }
+    
+    func readerSession(_ session: NFCNDEFReaderSession, didDetectNDEFs messages: [NFCNDEFMessage]) {
+        if let firstMessage = messages.first, let firstRecord = firstMessage.records.first {
+            let payloadData = firstRecord.payload
+            if let nfcValue = String(data: payloadData, encoding: .utf8) {
+                viewModel.sendNFCToServer(code: nfcValue) { result in
+                    switch result {
+                    case.success(_):
+                        DispatchQueue.main.async {
+                          print("nfc 통신 성공!")
+                        }
+                    case .failure(let error):
+                        print("nfc 통신 실패!")
+                        print(error)
+                        print(nfcValue)
+                        print()
+                    }
+                }
+            }
+        }
+    }
+    
+    func readerSession(_ session: NFCNDEFReaderSession, didInvalidateWithError error: Error) {
+        print("NFC session invalidated with error: \(error.localizedDescription)")
     }
 }
-

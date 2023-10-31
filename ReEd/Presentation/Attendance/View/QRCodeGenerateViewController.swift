@@ -12,9 +12,11 @@ import QRCode
 
 class QRCodeGenerateViewController: UIViewController {
 
+    let GenerateQRCode = QRCode(string: "my awesome QR code")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+
     }
 }
 
