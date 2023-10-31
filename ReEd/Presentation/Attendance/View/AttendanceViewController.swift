@@ -20,6 +20,8 @@ class AttendanceViewController: UIViewController, NFCNDEFReaderSessionDelegate {
     
     let viewModel = NFCScanViewModel()
     
+    let UserViewModel = UserProfileViewModel()
+    
     var isSideMenuVisible = false
     
     private let attendanceStackView = UIStackView().then {
@@ -66,7 +68,7 @@ class AttendanceViewController: UIViewController, NFCNDEFReaderSessionDelegate {
     private let nfcLabel = UILabel().then {
         $0.text = "NFC"
         $0.font = UIFont(name: "NanumGothicBold", size: 20)
-        //$0.isSkeletonable = true
+        $0.isSkeletonable = true
         $0.textColor = .black
         $0.sizeToFit()
     }
@@ -74,7 +76,7 @@ class AttendanceViewController: UIViewController, NFCNDEFReaderSessionDelegate {
     private let nfcScanLabel = UILabel().then {
         $0.text = "태그하기"
         $0.font = UIFont.systemFont(ofSize: 18)
-        //$0.isSkeletonable = true
+        $0.isSkeletonable = true
         $0.textColor = .black
         $0.sizeToFit()
     }
@@ -83,7 +85,7 @@ class AttendanceViewController: UIViewController, NFCNDEFReaderSessionDelegate {
         $0.text = "수업 전 NFC영역에 태그하세요."
         $0.font = UIFont.systemFont(ofSize: 14)
         $0.textColor = .black
-        //$0.isSkeletonable = true
+        $0.isSkeletonable = true
         $0.sizeToFit()
     }
     
@@ -93,24 +95,23 @@ class AttendanceViewController: UIViewController, NFCNDEFReaderSessionDelegate {
         $0.textAlignment = .left
         $0.textColor = .black
         $0.numberOfLines = 2
-        //$0.isSkeletonable = true
+        $0.isSkeletonable = true
     }
     
     private let qrAttendance = UIImageView().then {
         $0.image = UIImage(named: "img_qrcode")
         $0.contentMode = .scaleAspectFit
-        //$0.isSkeletonable = true
+        $0.isSkeletonable = true
     }
     
     private let nfcAttendance = UIImageView().then {
         $0.image = UIImage(named: "img_nfc")
         $0.contentMode = .scaleAspectFit
-        //$0.isSkeletonable = true
+        $0.isSkeletonable = true
     }
     
     let burgerButton = UIButton().then {
         $0.setImage(UIImage(named: "MenuBurger"), for: .normal)
-        //$0.isSkeletonable = true
     }
     
     private let reed_lisence = UIImageView().then {
@@ -119,13 +120,26 @@ class AttendanceViewController: UIViewController, NFCNDEFReaderSessionDelegate {
     }
     
     override func viewDidLoad() {
+        UserViewModel.getUserInfo()
+        
+        UserViewModel.userCompletion = { result in
+            switch result {
+            case .success(let value):
+                print("유저 정보 호출 성공!")
+                self.userLabel.text = "\(value.name)님\n안녕하세요"
+                
+            case .failure(let error):
+                print("유저 정보 호출 실패!")
+                print(error)
+
+            }
+        }
         
         if keychainManager_role == "TEACHER" {
             qrCodeScanLabel.text = "QR코드 생성하기"
             qrCodeScanLabel.sizeToFit()
             qrCodeIntroduction.text = "수업전 QR 코드를 생성해주세요"
         }
-        
         
         super.viewDidLoad()
         
@@ -295,9 +309,7 @@ class AttendanceViewController: UIViewController, NFCNDEFReaderSessionDelegate {
         }
     }
     
-    // nfcView를 터치했을 때 호출되는 함수
     @objc func nfcTapped() {
-        // NFC 세션을 시작합니다.
         guard NFCNDEFReaderSession.readingAvailable else {
             return
         }
@@ -312,15 +324,13 @@ class AttendanceViewController: UIViewController, NFCNDEFReaderSessionDelegate {
             if let nfcValue = String(data: payloadData, encoding: .utf8) {
                 viewModel.sendNFCToServer(code: nfcValue) { result in
                     switch result {
-                    case.success(_):
-                        DispatchQueue.main.async {
-                          print("nfc 통신 성공!")
-                        }
+                    case.success():
+                        print("nfc 통신 성공!")
+                        
                     case .failure(let error):
                         print("nfc 통신 실패!")
                         print(error)
                         print(nfcValue)
-                        print()
                     }
                 }
             }

@@ -15,10 +15,10 @@ class NFCScanViewModel {
         
         let headers: HTTPHeaders = [
             "accept": "*/*",
-            "Authorization": "Bearer + \(String(describing: token))",
+            "Authorization": "Bearer + \(String(describing: token))"
         ]
 
-        let request = NFCRequest(code: (String(describing: code)))
+        let request = NFCRequest(code: code)
         
 
         let serverURL = "http://52.79.171.108:8080/api/attendance/nfc"
@@ -31,6 +31,7 @@ class NFCScanViewModel {
                           completion(.success(()))
                       case .failure(let error):
                           completion(.failure(error))
+                          print(code)
                       }
                   }
           }

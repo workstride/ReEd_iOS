@@ -31,3 +31,28 @@ struct UserInfoResponse: Codable {
         case admin = "ADMIN"
     }
 }
+
+extension UserInfoResponse {
+    // Date 형식을 파싱하는 데 사용할 DateFormatter를 정의
+    private static var iso8601FractionalSecondsFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSS"
+        formatter.timeZone = TimeZone(abbreviation: "UTC") // 원하는 시간대로 변경
+        return formatter
+    }()
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+
+        id = try container.decode(Int.self, forKey: .id)
+        email = try container.decode(String.self, forKey: .email)
+        gender = try container.decode(Gender.self, forKey: .gender)
+        birth = try container.decode(String.self, forKey: .birth)
+        name = try container.decode(String.self, forKey: .name)
+        tel = try container.decode(String.self, forKey: .tel)
+        role = try container.decode(Role.self, forKey: .role)
+
+        let regDateString = try container.decode(String.self, forKey: .regDate)
+        regDate = Self.iso8601FractionalSecondsFormatter.date(from: regDateString) ?? Date()
+    }
+}

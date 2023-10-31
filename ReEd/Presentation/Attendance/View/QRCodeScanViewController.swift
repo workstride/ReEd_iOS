@@ -24,7 +24,7 @@ class QRCodeScanViewController: UIViewController, AVCaptureMetadataOutputObjects
         super.viewDidLoad()
         
         let interfaceView = UIView()
-           interfaceView.backgroundColor = .clear  // Set background color as needed
+           interfaceView.backgroundColor = .clear
            view.addSubview(interfaceView)
         
         captureSession = AVCaptureSession()
