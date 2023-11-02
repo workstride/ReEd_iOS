@@ -95,6 +95,7 @@ class Affilation_InputEmailViewController: UIViewController {
         setNavigationBackButton()
         setupSubviews()
         setupConstraints()
+        
         sendEmailButton.isEnabled = false
         nextViewButton.isHidden = true
         inputEmailTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
@@ -119,12 +120,13 @@ class Affilation_InputEmailViewController: UIViewController {
         // Send Email 버튼 누를 때 Certification Number 텍스트 필드 표시 및 포커스
         sendEmailButton.rx.tap
             .subscribe(onNext: { [weak self] in
-                self?.inputEmailTextField.isUserInteractionEnabled = false
+    
                 // 이메일 입력 필드 비활성화
                 self?.inputCertificationNumberTextField.isHidden = false
                 self?.inputCertificationNumberTextField.becomeFirstResponder()
                 self?.sendEmailButton.isHidden = true
                 self?.nextViewButton.isHidden = false
+                print(self?.inputEmailTextField.text)
             })
             .disposed(by: disposeBag)
         
@@ -197,7 +199,6 @@ class Affilation_InputEmailViewController: UIViewController {
     
     @objc private func emailChecked(_ textField: UITextField) {
         if let emailRegex = textField.text, !emailRegex.isEmpty {
-            
         }
     }
     
@@ -210,6 +211,7 @@ class Affilation_InputEmailViewController: UIViewController {
     }
     
     @objc private func nextViewBtnclicked() {
-        //navigationController?.pushViewController(StudentInfoVC(), animated: true)
+        let userEmail = InputUserInfo.shared
+        InputUserInfo.shared.name = inputEmailTextField.text
     }
 }

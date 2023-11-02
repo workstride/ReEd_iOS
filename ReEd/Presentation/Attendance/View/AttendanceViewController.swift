@@ -5,6 +5,7 @@
 //  Created by 김건우 on 10/11/23.
 //
 
+import CoreNFC
 import RxCocoa
 import RxSwift
 import SideMenu
@@ -12,7 +13,6 @@ import SkeletonView
 import SnapKit
 import Then
 import UIKit
-import CoreNFC
 
 class AttendanceViewController: UIViewController, NFCNDEFReaderSessionDelegate {
     
@@ -131,7 +131,6 @@ class AttendanceViewController: UIViewController, NFCNDEFReaderSessionDelegate {
             case .failure(let error):
                 print("유저 정보 호출 실패!")
                 print(error)
-
             }
         }
         
@@ -178,7 +177,8 @@ class AttendanceViewController: UIViewController, NFCNDEFReaderSessionDelegate {
         
         burgerButton.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide)
-            $0.left.equalTo(view).offset(16)
+//            $0.left.equalTo(view.).offset(16)
+            $0.leading.equalTo(view.snp.leading).offset(16)
             $0.width.height.equalTo(30)
         }
         
@@ -277,25 +277,9 @@ class AttendanceViewController: UIViewController, NFCNDEFReaderSessionDelegate {
     
     @objc private func toggleSideMenu() {
         if let leftMenuNavigationController = SideMenuManager.default.leftMenuNavigationController {
-            if isSideMenuVisible {
-                // 사이드 메뉴가 열려 있을 때
-                UIView.animate(withDuration: 0.3) {
-                    self.burgerButton.setImage(UIImage(named: "MenuBurger"), for: .normal)
-                    self.burgerButton.transform = CGAffineTransform(translationX: -10, y: 0)
-                }
-                isSideMenuVisible = false
-                leftMenuNavigationController.dismiss(animated: true, completion: nil)
-            } else {
-                // 사이드 메뉴가 닫혀 있을 때
-                UIView.animate(withDuration: 0.3) {
-                    let translationX = leftMenuNavigationController.view.frame.width
-                    self.burgerButton.transform = CGAffineTransform(translationX: translationX, y: 0)
-                    self.burgerButton.setImage(UIImage(named: "Close"), for: .normal)
-                }
-                
-                isSideMenuVisible = true
-                present(leftMenuNavigationController, animated: true, completion: nil)
-            }
+            
+            isSideMenuVisible = true
+            present(leftMenuNavigationController, animated: true, completion: nil)
         }
     }
     
@@ -305,7 +289,7 @@ class AttendanceViewController: UIViewController, NFCNDEFReaderSessionDelegate {
         }
         
         if keychainManager_role == "STUDENT" {
-            navigationController?.pushViewController(QRCodeScanViewController(), animated: true)
+            self.show(QRCodeScanViewController(), sender: nil)
         }
     }
     

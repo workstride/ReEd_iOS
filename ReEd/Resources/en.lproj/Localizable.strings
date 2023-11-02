@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  ReEd
+
+  Created by 김건우 on 11/2/23.
+  
+*/
+"Notification settings" = "Notification settings";
+"Dark Mode" = "Dark Mode";
+"version" = "version";
+"Logout" = "Logout";
+"QRCode" = "QRCode";
+"Scan" = "Scan";
+"Tag" = "Tag";
+
+"Please recognize the QRCode before class" = "Please recognize the QRCode before class";
+
+"Please recognize the NFC Tag before class" = "Please recognize the NFC Tag before class";

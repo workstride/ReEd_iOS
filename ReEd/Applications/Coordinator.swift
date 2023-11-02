@@ -12,9 +12,9 @@ class Coordinator {
     init(window: UIWindow) {
         self.window = window
     }
-    
+
     func start(){
-        let rootViewController = LoginViewController()
+        let rootViewController = LoginSelectViewController()
         let navigationViewController = UINavigationController(rootViewController:
             rootViewController)
         navigationViewController.navigationBar.tintColor = .black

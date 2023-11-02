@@ -8,6 +8,7 @@
 import SwiftKeychainWrapper
 
 class KeychainManager {
+    
     static let shared = KeychainManager()
 
     private let emailKey = "userEmail"

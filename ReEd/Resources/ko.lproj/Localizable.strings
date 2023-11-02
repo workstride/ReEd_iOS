@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  ReEd
+
+  Created by 김건우 on 11/2/23.
+  
+*/
+"Notification settings" = "알림 설정";
+"Dark Mode" = "다크모드";
+"version" = "버전";
+"logout" = "로그아웃";
+

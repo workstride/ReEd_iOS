@@ -5,10 +5,10 @@
 //  Created by 김건우 on 10/27/23.
 //
 
-import UIKit
 import AVFoundation
 import SnapKit
 import Then
+import UIKit
 
 class QRCodeScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
@@ -16,7 +16,7 @@ class QRCodeScanViewController: UIViewController, AVCaptureMetadataOutputObjects
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
     var centerImageView: UIImageView!
-            
+    
     let qrCodeViewModel = QRCodeScanViewModel()
     let topAreaHeight: CGFloat = 100
     
@@ -24,8 +24,8 @@ class QRCodeScanViewController: UIViewController, AVCaptureMetadataOutputObjects
         super.viewDidLoad()
         
         let interfaceView = UIView()
-           interfaceView.backgroundColor = .clear
-           view.addSubview(interfaceView)
+        interfaceView.backgroundColor = .clear
+        view.addSubview(interfaceView)
         
         captureSession = AVCaptureSession()
         
@@ -106,7 +106,7 @@ class QRCodeScanViewController: UIViewController, AVCaptureMetadataOutputObjects
         if captureSession.isRunning {
             captureSession.stopRunning()
         }
-
+        
         // 서버에 QR 코드 값 전송
         qrCodeViewModel.sendQRCodeToServer(code: value) { [weak self] result in
             switch result {
@@ -114,10 +114,13 @@ class QRCodeScanViewController: UIViewController, AVCaptureMetadataOutputObjects
                 
                 let alertController = UIAlertController(title: "출석완료!", message: nil, preferredStyle: .alert)
                 let okAction = UIAlertAction(title: "확인", style: .default) { _ in
-
-                    self?.dismiss(animated: true) {
-                        UIApplication.shared.windows.first?.rootViewController = AttendanceViewController()
-                    }
+                    
+                    //                    self?.dismiss(animated: true) {
+                    //                        UIApplication.shared.windows.first?.rootViewController = AttendanceViewController()
+                    //                    }
+                    self?.dismiss(animated: true, completion: {
+                        
+                    })
                 }
                 
                 alertController.addAction(okAction)
@@ -129,9 +132,12 @@ class QRCodeScanViewController: UIViewController, AVCaptureMetadataOutputObjects
                 let alertController = UIAlertController(title: "인증 실패", message: nil, preferredStyle: .alert)
                 
                 let closeAction = UIAlertAction(title: "닫기", style: .default) { _ in
-                    self?.dismiss(animated: true) {
-                        UIApplication.shared.windows.first?.rootViewController = AttendanceViewController()
-                    }
+                    self?.navigationController?.popViewController(animated: true)
+                    
+                    
+                    //                    self?.dismiss(animated: true) {
+                    //                        UIApplication.shared.windows.first?.rootViewController = AttendanceViewController()
+                    //                    }
                 }
                 
                 alertController.addAction(closeAction)
@@ -139,6 +145,6 @@ class QRCodeScanViewController: UIViewController, AVCaptureMetadataOutputObjects
             }
         }
     }
-
+    
     
 }

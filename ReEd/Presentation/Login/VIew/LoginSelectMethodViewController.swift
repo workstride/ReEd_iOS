@@ -58,8 +58,6 @@ class LoginSelectMethodViewController: UIViewController {
         setupSubviews()
         setupConstraints()
         
-        
-        
         view.backgroundColor = .white
     }
     

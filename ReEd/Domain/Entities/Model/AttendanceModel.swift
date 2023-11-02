@@ -8,7 +8,7 @@
 import Foundation
 
 struct QRCodeRequest: Encodable {
-    var code: String
+    let code: String
 }
 
 struct GenerateQRCodeRequest: Encodable {

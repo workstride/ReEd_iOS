@@ -19,7 +19,6 @@
 		5814A1862AEC207B00021D22 /* DataFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5814A1852AEC207A00021D22 /* DataFormatter.swift */; };
 		5814A1882AEC339900021D22 /* Affilation_InputPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5814A1872AEC339900021D22 /* Affilation_InputPasswordViewController.swift */; };
 		5814A18A2AEC36FE00021D22 /* Affilation_InputPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5814A1892AEC36FE00021D22 /* Affilation_InputPasswordViewModel.swift */; };
-		5814A18D2AED875600021D22 /* QRCode in Frameworks */ = {isa = PBXBuildFile; productRef = 5814A18C2AED875600021D22 /* QRCode */; };
 		5814A18F2AED891D00021D22 /* QRCodeGenerateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5814A18E2AED891D00021D22 /* QRCodeGenerateViewController.swift */; };
 		58331E5B2AD6923D00BF0933 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58331E5A2AD6923D00BF0933 /* AppDelegate.swift */; };
 		58331E5D2AD6923D00BF0933 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58331E5C2AD6923D00BF0933 /* SceneDelegate.swift */; };
@@ -33,6 +32,10 @@
 		58331E902AD692B800BF0933 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 58331E8F2AD692B800BF0933 /* Then */; };
 		5866D59F2AE6B5C600A0C346 /* NanumGothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5866D59D2AE6B3FF00A0C346 /* NanumGothic.ttf */; };
 		5866D5A02AE6B5C900A0C346 /* NanumGothicBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5866D59E2AE6B3FF00A0C346 /* NanumGothicBold.ttf */; };
+		5866D98D2AF3941F00830A33 /* JoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5866D98C2AF3941F00830A33 /* JoinModel.swift */; };
+		5866D98F2AF397CA00830A33 /* Affilation_InputEmailViIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5866D98E2AF397CA00830A33 /* Affilation_InputEmailViIewModel.swift */; };
+		5866D9922AF3EBBD00830A33 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5866D9942AF3EBBD00830A33 /* Localizable.strings */; };
+		5866D9972AF3EEFC00830A33 /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5866D9962AF3EEFC00830A33 /* LanguageViewController.swift */; };
 		5871F8842AD8D96B00C8F41D /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 5871F8832AD8D96B00C8F41D /* SideMenu */; };
 		5871F8862AD8DB1400C8F41D /* SideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5871F8852AD8DB1400C8F41D /* SideViewController.swift */; };
 		5899900A2ADD473A0034815D /* LoginSelectMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589990092ADD473A0034815D /* LoginSelectMethodViewController.swift */; };
@@ -54,7 +57,9 @@
 		58AC49C72AD6B3710089C900 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 58AC49C62AD6B3710089C900 /* SnapKit */; };
 		58CDD55A2AEFFA2000E6415D /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CDD5592AEFFA2000E6415D /* Loading.swift */; };
 		58CDD55C2AF0775800E6415D /* QRCodeGenerateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CDD55B2AF0775800E6415D /* QRCodeGenerateViewModel.swift */; };
+		58DA02742AF3312000B5AF70 /* InputUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DA02732AF3312000B5AF70 /* InputUserInfo.swift */; };
 		58DE90282AE9026A001AED6E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58DE90272AE9026A001AED6E /* GoogleService-Info.plist */; };
+		58EC17732AF149BC003B9C40 /* EFQRCode in Frameworks */ = {isa = PBXBuildFile; productRef = 58EC17722AF149BC003B9C40 /* EFQRCode */; };
 		58EF1E012AD7648000F96E2D /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 58EF1E002AD7648000F96E2D /* RxSwift */; };
 		58EF1E032AD7648800F96E2D /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 58EF1E022AD7648800F96E2D /* RxCocoa */; };
 		58F5F59B2AE23D940059A9BB /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F5F59A2AE23D930059A9BB /* UserInfoModel.swift */; };
@@ -120,6 +125,11 @@
 		58331E7D2AD6923E00BF0933 /* ReEdUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReEdUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5866D59D2AE6B3FF00A0C346 /* NanumGothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumGothic.ttf; sourceTree = "<group>"; };
 		5866D59E2AE6B3FF00A0C346 /* NanumGothicBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumGothicBold.ttf; sourceTree = "<group>"; };
+		5866D98C2AF3941F00830A33 /* JoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinModel.swift; sourceTree = "<group>"; };
+		5866D98E2AF397CA00830A33 /* Affilation_InputEmailViIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Affilation_InputEmailViIewModel.swift; sourceTree = "<group>"; };
+		5866D9932AF3EBBD00830A33 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5866D9952AF3EBEE00830A33 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5866D9962AF3EEFC00830A33 /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
 		5871F8852AD8DB1400C8F41D /* SideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideViewController.swift; sourceTree = "<group>"; };
 		589990092ADD473A0034815D /* LoginSelectMethodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSelectMethodViewController.swift; sourceTree = "<group>"; };
 		5899900D2ADD484F0034815D /* ReedLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReedLogo.swift; sourceTree = "<group>"; };
@@ -137,6 +147,7 @@
 		58A8FA392AF0BFC6004CCC0B /* NFCScanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCScanViewModel.swift; sourceTree = "<group>"; };
 		58CDD5592AEFFA2000E6415D /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
 		58CDD55B2AF0775800E6415D /* QRCodeGenerateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeGenerateViewModel.swift; sourceTree = "<group>"; };
+		58DA02732AF3312000B5AF70 /* InputUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputUserInfo.swift; sourceTree = "<group>"; };
 		58DE90262AE9012D001AED6E /* ReEd.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ReEd.entitlements; sourceTree = "<group>"; };
 		58DE90272AE9026A001AED6E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		58F5F59A2AE23D930059A9BB /* UserInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
@@ -150,10 +161,10 @@
 			files = (
 				58AC49C72AD6B3710089C900 /* SnapKit in Frameworks */,
 				5899A8882AE14BBE002D5E2B /* SkeletonView in Frameworks */,
-				5814A18D2AED875600021D22 /* QRCode in Frameworks */,
 				58331E8C2AD692A400BF0933 /* Alamofire in Frameworks */,
 				58EF1E032AD7648800F96E2D /* RxCocoa in Frameworks */,
 				58EF1E012AD7648000F96E2D /* RxSwift in Frameworks */,
+				58EC17732AF149BC003B9C40 /* EFQRCode in Frameworks */,
 				5871F8842AD8D96B00C8F41D /* SideMenu in Frameworks */,
 				5899A88D2AE17860002D5E2B /* SwiftKeychainWrapper in Frameworks */,
 				58331E902AD692B800BF0933 /* Then in Frameworks */,
@@ -202,6 +213,7 @@
 			children = (
 				5814A1772AEBCDB300021D22 /* AffilationViewModel.swift */,
 				5814A1892AEC36FE00021D22 /* Affilation_InputPasswordViewModel.swift */,
+				5866D98E2AF397CA00830A33 /* Affilation_InputEmailViIewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -302,6 +314,7 @@
 				58331E682AD6923E00BF0933 /* Info.plist */,
 				58331E632AD6923E00BF0933 /* Assets.xcassets */,
 				58331E652AD6923E00BF0933 /* LaunchScreen.storyboard */,
+				5866D9942AF3EBBD00830A33 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -410,6 +423,7 @@
 			isa = PBXGroup;
 			children = (
 				5871F8852AD8DB1400C8F41D /* SideViewController.swift */,
+				5866D9962AF3EEFC00830A33 /* LanguageViewController.swift */,
 			);
 			path = SideViewController;
 			sourceTree = "<group>";
@@ -420,6 +434,8 @@
 				58F5F59A2AE23D930059A9BB /* UserInfoModel.swift */,
 				589FBD3F2AD6BC2500EBF951 /* Login.swift */,
 				5814A1812AEC16BE00021D22 /* AttendanceModel.swift */,
+				58DA02732AF3312000B5AF70 /* InputUserInfo.swift */,
+				5866D98C2AF3941F00830A33 /* JoinModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -450,7 +466,7 @@
 				5871F8832AD8D96B00C8F41D /* SideMenu */,
 				5899A8872AE14BBE002D5E2B /* SkeletonView */,
 				5899A88C2AE17860002D5E2B /* SwiftKeychainWrapper */,
-				5814A18C2AED875600021D22 /* QRCode */,
+				58EC17722AF149BC003B9C40 /* EFQRCode */,
 			);
 			productName = ReEd;
 			productReference = 58331E572AD6923D00BF0933 /* ReEd.app */;
@@ -522,6 +538,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = 58331E4E2AD6923D00BF0933;
 			packageReferences = (
@@ -532,7 +549,7 @@
 				5871F8822AD8D96B00C8F41D /* XCRemoteSwiftPackageReference "SideMenu" */,
 				5899A8862AE14BBE002D5E2B /* XCRemoteSwiftPackageReference "SkeletonView" */,
 				5899A88B2AE17860002D5E2B /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
-				5814A18B2AED875600021D22 /* XCRemoteSwiftPackageReference "QRCode" */,
+				58EC17712AF149BC003B9C40 /* XCRemoteSwiftPackageReference "EFQRCode" */,
 			);
 			productRefGroup = 58331E582AD6923D00BF0933 /* Products */;
 			projectDirPath = "";
@@ -551,6 +568,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5866D59F2AE6B5C600A0C346 /* NanumGothic.ttf in Resources */,
+				5866D9922AF3EBBD00830A33 /* Localizable.strings in Resources */,
 				5866D5A02AE6B5C900A0C346 /* NanumGothicBold.ttf in Resources */,
 				58331E672AD6923E00BF0933 /* LaunchScreen.storyboard in Resources */,
 				58331E642AD6923E00BF0933 /* Assets.xcassets in Resources */,
@@ -591,7 +609,9 @@
 				58CDD55C2AF0775800E6415D /* QRCodeGenerateViewModel.swift in Sources */,
 				58331E5B2AD6923D00BF0933 /* AppDelegate.swift in Sources */,
 				58331E5D2AD6923D00BF0933 /* SceneDelegate.swift in Sources */,
+				5866D98D2AF3941F00830A33 /* JoinModel.swift in Sources */,
 				589FBD432AD6BD1D00EBF951 /* PlaceHolder.swift in Sources */,
+				58DA02742AF3312000B5AF70 /* InputUserInfo.swift in Sources */,
 				5814A1742AEBCD0800021D22 /* Affilation_SelectRoleViewController.swift in Sources */,
 				5814A1822AEC16BE00021D22 /* AttendanceModel.swift in Sources */,
 				5814A18A2AEC36FE00021D22 /* Affilation_InputPasswordViewModel.swift in Sources */,
@@ -600,6 +620,7 @@
 				589FBD452AD6BDA900EBF951 /* Coordinator.swift in Sources */,
 				58CDD55A2AEFFA2000E6415D /* Loading.swift in Sources */,
 				5814A1762AEBCD4C00021D22 /* Affilation_InputEmailViewController.swift in Sources */,
+				5866D9972AF3EEFC00830A33 /* LanguageViewController.swift in Sources */,
 				58F5F59D2AE247DB0059A9BB /* UserProfileViewModel.swift in Sources */,
 				5814A1782AEBCDB300021D22 /* AffilationViewModel.swift in Sources */,
 				5814A1882AEC339900021D22 /* Affilation_InputPasswordViewController.swift in Sources */,
@@ -608,6 +629,7 @@
 				5814A17E2AEBE49600021D22 /* StudentInfoTextField.swift in Sources */,
 				580A18022ADFCA8200CAC0EF /* CustomButton.swift in Sources */,
 				589FBD532AD6C2E900EBF951 /* AttendanceViewController.swift in Sources */,
+				5866D98F2AF397CA00830A33 /* Affilation_InputEmailViIewModel.swift in Sources */,
 				5814A1712AEACFB100021D22 /* QRCodeScanViewController.swift in Sources */,
 				589990102ADE064A0034815D /* LoginInputEamilViewController.swift in Sources */,
 				5814A1862AEC207B00021D22 /* DataFormatter.swift in Sources */,
@@ -658,6 +680,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		5866D9942AF3EBBD00830A33 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5866D9932AF3EBBD00830A33 /* en */,
+				5866D9952AF3EBEE00830A33 /* ko */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -667,6 +698,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -730,6 +762,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -973,14 +1006,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5814A18B2AED875600021D22 /* XCRemoteSwiftPackageReference "QRCode" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/dmrschmidt/QRCode";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.0;
-			};
-		};
 		58331E8A2AD692A400BF0933 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -1037,14 +1062,17 @@
 				minimumVersion = 4.0.1;
 			};
 		};
+		58EC17712AF149BC003B9C40 /* XCRemoteSwiftPackageReference "EFQRCode" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/EFPrefix/EFQRCode";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.2.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5814A18C2AED875600021D22 /* QRCode */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5814A18B2AED875600021D22 /* XCRemoteSwiftPackageReference "QRCode" */;
-			productName = QRCode;
-		};
 		58331E8B2AD692A400BF0933 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 58331E8A2AD692A400BF0933 /* XCRemoteSwiftPackageReference "Alamofire" */;
@@ -1074,6 +1102,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 58331E8D2AD692AF00BF0933 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		58EC17722AF149BC003B9C40 /* EFQRCode */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58EC17712AF149BC003B9C40 /* XCRemoteSwiftPackageReference "EFQRCode" */;
+			productName = EFQRCode;
 		};
 		58EF1E002AD7648000F96E2D /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;

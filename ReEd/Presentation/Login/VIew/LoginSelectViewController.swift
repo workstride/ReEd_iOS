@@ -68,21 +68,18 @@ extension LoginSelectViewController {
         }
         
         loginStackView.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-140)
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-160)
             $0.leading.equalToSuperview().offset(20)
             $0.trailing.equalToSuperview().offset(-20)
-            $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-20)
+            $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-40)
         }
     }
     
     @objc private func didTapJoinButton() {
-        navigationController?.pushViewController(LoginViewController(), animated: true)
+        navigationController?.pushViewController(Affilation_InputEmailViewController(), animated: true)
     }
     
     @objc private func didTapLoginButton() {
-        let LoginVC = LoginViewController()
-        LoginVC.navigationItem.hidesBackButton = true
-        self.navigationController?.setViewControllers([LoginVC], animated: true)
+        navigationController?.pushViewController(LoginViewController(), animated: true)
     }
-        
 }
