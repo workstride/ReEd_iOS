@@ -17,7 +17,10 @@ class SideViewController: UITableViewController {
     
     let sectionTitles = ["알림", "관리", "설정"]
     
-    let userLogout = KeychainManager.shared.deleteLoginInfo()
+    let userLogout: () = {
+        KeychainManager.shared.deleteLoginInfo(isDeletionAllowed: true)
+    }()
+
     
     override func viewDidLoad() {
         self.tableView.isScrollEnabled = false
@@ -51,7 +54,7 @@ class SideViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         
         if indexPath.section == 0 && indexPath.row == 0 {
-            print("1")
+            navigationController?.pushViewController(NotificationSettingsViewController(), animated: true)
         }
         else if indexPath.section == 1 && indexPath.row == 0 {
             print("학원 관리")
@@ -62,10 +65,23 @@ class SideViewController: UITableViewController {
         else if indexPath.section == 2 && indexPath.row == 1 {
             showAlert(message: "미 구현된 기능입니다")
         }
+        else if indexPath.section == 2 && indexPath.row == 2 {
+            navigationController?.pushViewController(VersionViewController(), animated: true)
+        }
+        else if indexPath.section == 2 && indexPath.row == 0 {
+            navigationController?.pushViewController(LanguageViewController(), animated: true)
+        }
         else if indexPath.section == 2 && indexPath.row == 3 {
             userLogout
             if (KeychainManager.shared.getLoginInfo().token == nil) {
                 self.showAlert(message: "로그아웃이 완료되었습니다")
+                let loginSelectViewController = LoginSelectViewController() // 예시로 로그인 화면을 초기 뷰로 설정
+                // 2. 네비게이션 컨트롤러를 사용하는 경우:
+                let navigationController = UINavigationController(rootViewController: loginSelectViewController)
+                self.dismiss(animated: true) {
+                    UIApplication.shared.windows.first?.rootViewController = loginSelectViewController
+                }
+                
             } else {
                 self.showAlert(message: "로그아웃이 실패하였습니다")
             }

@@ -4,7 +4,6 @@
 //
 //  Created by 김건우 on 11/2/23.
 //
-
 import UIKit
 import SnapKit
 
@@ -28,6 +27,7 @@ class LanguageViewController: UIViewController, UITableViewDataSource, UITableVi
             make.edges.equalToSuperview()
         }
     }
+    
 
     // 테이블 뷰 데이터 소스 메서드
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,5 +45,13 @@ class LanguageViewController: UIViewController, UITableViewDataSource, UITableVi
         // 선택한 언어 처리 로직을 추가합니다.
         let selectedLanguage = languages[indexPath.row]
         print("선택한 언어: \(selectedLanguage)")
+        if selectedLanguage == "한국어" {
+            UserDefaults.standard.set(["ko"], forKey: "AppleLanguages")
+                    UserDefaults.standard.synchronize()
+        }
+        else if selectedLanguage == "영어" {
+            UserDefaults.standard.set(["en"], forKey: "AppleLanguages")
+                UserDefaults.standard.synchronize()
+        }
     }
 }

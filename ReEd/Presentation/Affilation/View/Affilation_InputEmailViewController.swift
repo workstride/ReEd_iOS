@@ -5,11 +5,13 @@
 //  Created by 김건우 on 10/27/23.
 //
 
-import UIKit
+import Alamofire
+import RxCocoa
+import RxSwift
 import SnapKit
 import Then
-import RxSwift
-import RxCocoa
+import UIKit
+
 
 class Affilation_InputEmailViewController: UIViewController {
     
@@ -102,7 +104,7 @@ class Affilation_InputEmailViewController: UIViewController {
         nextViewButton.addTarget(self, action: #selector(nextViewBtnclicked), for: .touchUpInside)
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
-    
+        
         // Email 입력 필드의 내용 변경을 ViewModel에 연결
         inputEmailTextField.rx.text.orEmpty
             .bind(to: viewModel.emailText)
@@ -120,24 +122,41 @@ class Affilation_InputEmailViewController: UIViewController {
         // Send Email 버튼 누를 때 Certification Number 텍스트 필드 표시 및 포커스
         sendEmailButton.rx.tap
             .subscribe(onNext: { [weak self] in
-    
                 // 이메일 입력 필드 비활성화
                 self?.inputCertificationNumberTextField.isHidden = false
                 self?.inputCertificationNumberTextField.becomeFirstResponder()
                 self?.sendEmailButton.isHidden = true
                 self?.nextViewButton.isHidden = false
-                print(self?.inputEmailTextField.text)
+                
+                let inputEmailURL = "http://52.79.171.108:8080/api/mail/send"
+                
+                if let email = self?.inputEmailTextField.text {
+                    // 이메일 값을 사용하여 Alamofire 통신 설정
+                    let parameters: [String: Any] = ["email": email]
+                    
+                    // Alamofire를 사용하여 POST 요청 보내기
+                    AF.request(inputEmailURL, method: .post, parameters: parameters, encoding: JSONEncoding.default)
+                        .responseJSON { response in
+                            switch response.result {
+                            case .success:
+                                if let data = response.data {
+                                    // 서버 응답 처리
+                                    do {
+                                        let json = try JSONSerialization.jsonObject(with: data, options: [])
+                                        print(json)
+                                    } catch {
+                                        print("JSON 파싱 에러: \(error)")
+                                    }
+                                }
+                            case .failure(let error):
+                                print("요청 실패: \(error)")
+                            }
+                        }
+                }
             })
             .disposed(by: disposeBag)
-        
-        // Certification Number 입력이 완료되면 Email 입력 필드 다시 활성화
-        inputCertificationNumberTextField.rx.controlEvent(.editingDidEndOnExit)
-            .subscribe(onNext: { [weak self] in
-                self?.inputEmailTextField.isUserInteractionEnabled = true
-            })
-            .disposed(by: disposeBag)
-        }
-
+    }
+    
     private func setupSubviews() {
         
         stackView.addArrangedSubview(emailLabel)
@@ -211,7 +230,37 @@ class Affilation_InputEmailViewController: UIViewController {
     }
     
     @objc private func nextViewBtnclicked() {
-        let userEmail = InputUserInfo.shared
-        InputUserInfo.shared.name = inputEmailTextField.text
+        if let key = self.inputCertificationNumberTextField.text,
+           let email = self.inputEmailTextField.text {
+            let baseURL = "http://52.79.171.108:8080/api/mail/verify"
+            let parameters: [String: String] = ["key": key, "email": email]
+            
+            if var urlComponents = URLComponents(string: baseURL) {
+                urlComponents.queryItems = parameters.map { email, key in
+                    URLQueryItem(name: email, value: key)
+                }
+                
+                if let url = urlComponents.url {
+                    AF.request(url, method: .get).response { response in
+                        switch response.result {
+                        case .success:
+                            if let data = response.data {
+                                if let resultString = String(data: data, encoding: .utf8) {
+                                    if resultString == "success" {
+                                        print("인증 성공")
+                                    } else {
+                                        print("인증 실패")
+                                    }
+                                }
+                            }
+                        case .failure(let error):
+                            print(error)
+                            print("인증 실패")
+                        }
+                    }
+                }
+            }
+        }
     }
 }
+

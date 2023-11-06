@@ -115,9 +115,6 @@ class QRCodeScanViewController: UIViewController, AVCaptureMetadataOutputObjects
                 let alertController = UIAlertController(title: "출석완료!", message: nil, preferredStyle: .alert)
                 let okAction = UIAlertAction(title: "확인", style: .default) { _ in
                     
-                    //                    self?.dismiss(animated: true) {
-                    //                        UIApplication.shared.windows.first?.rootViewController = AttendanceViewController()
-                    //                    }
                     self?.dismiss(animated: true, completion: {
                         
                     })
@@ -133,11 +130,6 @@ class QRCodeScanViewController: UIViewController, AVCaptureMetadataOutputObjects
                 
                 let closeAction = UIAlertAction(title: "닫기", style: .default) { _ in
                     self?.navigationController?.popViewController(animated: true)
-                    
-                    
-                    //                    self?.dismiss(animated: true) {
-                    //                        UIApplication.shared.windows.first?.rootViewController = AttendanceViewController()
-                    //                    }
                 }
                 
                 alertController.addAction(closeAction)

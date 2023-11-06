@@ -5,43 +5,46 @@
 //  Created by 김건우 on 10/29/23.
 //
 
-//import UIKit
-//import SnapKit
-//import Then
-//import EFQRCode
-//
-//class QRCodeGenerateViewController {
-//    func generateQRCode() -> UIImage? {
-//        let text = "123"
-//        
-//        guard let weakSelf = self else { return nil }
-//
-//        let generateClosure: () -> UIImage? = { [weak weakSelf] in
-//            guard let self = weakSelf else { return nil }
-//
-//            if let image = EFQRCode.generate(
-//                content: text,
-//                backgroundColor: UIColor.white.cgColor,
-//                foregroundColor: UIColor.black.cgColor
-//            ) {
-//                return UIImage(cgImage: image)
-//            }
-//
-//            return nil
-//        }
-//
-//        return generateClosure()
-//    }
-//}
-//
-//// QR 코드 생성기 인스턴스 생성
-//let generator = QRCodeGenerateViewController()
-//
-//// QR 코드 생성
-//if let qrCodeImage = generator.generateQRCode() {
-//    // 생성된 QR 코드 이미지를 사용하거나 표시합니다.
-//    let imageView = UIImageView(image: qrCodeImage)
-//    // 뷰에 추가하거나 화면에 표시할 수 있습니다.
-//}
-//
-//
+import UIKit
+import SnapKit
+import Alamofire
+import QRCode
+import Foundation
+
+class QRCodeGenerateViewController: UIViewController {
+    private let qrCodeImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
+    
+    private let qrCodeGenerateViewModel = QRCodeGenerateViewModel()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.addSubview(qrCodeImageView)
+        
+        qrCodeImageView.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+            make.width.equalTo(200)
+            make.height.equalTo(200)
+        }
+        
+        qrCodeGenerateViewModel.QRCodeGenerate { result in
+            do {
+                switch result {
+                case .success(let generateQRCodeResponse):
+                    // QRCode 생성
+                    if let qrCode = try QRCode(string: generateQRCodeResponse.code) {
+                        self.qrCodeImageView.image = try qrCode.image()
+                    }
+                case .failure(let error):
+                    print("QRCode generation failed with error: \(error)")
+                }
+            } catch {
+                print("An error occurred while generating QRCode: \(error)")
+            }
+        }
+    }
+}

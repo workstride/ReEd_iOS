@@ -50,8 +50,4 @@ class LoginViewModel {
             }
     }
     
-    func logoutUser() {
-        // 로그아웃 시 로그인 정보를 키체인에서 삭제
-        KeychainManager.shared.deleteLoginInfo()
-    }
 }
