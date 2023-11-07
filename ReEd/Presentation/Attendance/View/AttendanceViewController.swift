@@ -14,7 +14,7 @@ import SnapKit
 import Then
 import UIKit
 
-class AttendanceViewController: UIViewController, NFCNDEFReaderSessionDelegate {
+class AttendanceViewController: UIViewController  {
     
     let keychainManager_role = KeychainManager.shared.getLoginInfo().role
     
@@ -310,31 +310,47 @@ class AttendanceViewController: UIViewController, NFCNDEFReaderSessionDelegate {
         guard NFCNDEFReaderSession.readingAvailable else {
             return
         }
-        
-        let session = NFCNDEFReaderSession(delegate: self, queue: nil, invalidateAfterFirstRead: false)
-        session.begin()
+        let session = NFCTagReaderSession(pollingOption:  [.iso14443, .iso15693, .iso18092], delegate: self, queue: nil)
+//        let session = NFCTagReaderSession(delegate: self, queue: nil, invalidateAfterFirstRead: false)
+        session?.begin()
     }
     
-    func readerSession(_ session: NFCNDEFReaderSession, didDetectNDEFs messages: [NFCNDEFMessage]) {
-        if let firstMessage = messages.first, let firstRecord = firstMessage.records.first {
-            let payloadData = firstRecord.payload
-            if let nfcValue = String(data: payloadData, encoding: .utf8) {
-                viewModel.sendNFCToServer(code: nfcValue) { result in
-                    switch result {
-                    case.success():
-                        print("nfc 통신 성공!")
-                        
-                    case .failure(let error):
-                        print("nfc 통신 실패!")
-                        print(error)
-                        print(nfcValue)
+}
+
+extension AttendanceViewController : NFCTagReaderSessionDelegate {
+    
+    func tagReaderSessionDidBecomeActive(_ session: NFCTagReaderSession) {
+        
+    }
+    
+    func tagReaderSession(_ session: NFCTagReaderSession, didInvalidateWithError error: Error) {
+        
+    }
+    
+    func tagReaderSession(_ session: NFCTagReaderSession, didDetect tags: [NFCTag]) {
+        if case let NFCTag.miFare(tag) = tags.first! {
+            session.connect(to: tags.first!) { (error: Error?) in
+                let apdu = NFCISO7816APDU(instructionClass: 0, instructionCode: 0xB0, p1Parameter: 0, p2Parameter: 0, data: Data(), expectedResponseLength: 16)
+                tag.sendMiFareISO7816Command(apdu) { (apduData, sw1, sw2, error) in
+                    let nfcValue = tag.identifier
+                        .map { (data) -> String in
+                            return String(format: "%X", data)
+                        }
+                        .joined()
+                    print(tagUIDData)
+                    viewModel.sendNFCToServer(code: nfcValue) { result in
+                        switch result {
+                        case.success():
+                            print("nfc 통신 성공!")
+                        case .failure(let error):
+                            print("nfc 통신 실패!")
+                            print(error)
+                            print(nfcValue)
+                        }
                     }
                 }
             }
         }
     }
     
-    func readerSession(_ session: NFCNDEFReaderSession, didInvalidateWithError error: Error) {
-        print("NFC session invalidated with error: \(error.localizedDescription)")
-    }
 }
