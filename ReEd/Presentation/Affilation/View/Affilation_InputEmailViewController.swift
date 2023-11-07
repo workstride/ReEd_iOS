@@ -244,15 +244,7 @@ class Affilation_InputEmailViewController: UIViewController {
                     AF.request(url, method: .get).response { response in
                         switch response.result {
                         case .success:
-                            if let data = response.data {
-                                if let resultString = String(data: data, encoding: .utf8) {
-                                    if resultString == "success" {
-                                        print("인증 성공")
-                                    } else {
-                                        print("인증 실패")
-                                    }
-                                }
-                            }
+                            self.navigationController?.pushViewController(Affilation_SelectRoleViewController(), animated: true)
                         case .failure(let error):
                             print(error)
                             print("인증 실패")

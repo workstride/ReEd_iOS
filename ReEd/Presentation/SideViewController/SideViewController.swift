@@ -11,15 +11,11 @@ import SideMenu
 class SideViewController: UITableViewController {
     let menuOptions = [
         ["알림 설정"],
-        ["학원 관리", "내 정보 관리"],
+        ["일정 관리", "내 정보 관리"],
         ["언어 설정", "다크모드", "버전", "로그아웃", "탈퇴하기"]
     ]
     
     let sectionTitles = ["알림", "관리", "설정"]
-    
-    let userLogout: () = {
-        KeychainManager.shared.deleteLoginInfo(isDeletionAllowed: true)
-    }()
 
     
     override func viewDidLoad() {
@@ -57,7 +53,7 @@ class SideViewController: UITableViewController {
             navigationController?.pushViewController(NotificationSettingsViewController(), animated: true)
         }
         else if indexPath.section == 1 && indexPath.row == 0 {
-            print("학원 관리")
+            navigationController?.pushViewController(CalendarViewController(),animated: true)
         }
         else if indexPath.section ==  1 && indexPath.row == 1 {
             print("내 정보 관리")
@@ -72,7 +68,6 @@ class SideViewController: UITableViewController {
             navigationController?.pushViewController(LanguageViewController(), animated: true)
         }
         else if indexPath.section == 2 && indexPath.row == 3 {
-            userLogout
             if (KeychainManager.shared.getLoginInfo().token == nil) {
                 self.showAlert(message: "로그아웃이 완료되었습니다")
                 let loginSelectViewController = LoginSelectViewController() // 예시로 로그인 화면을 초기 뷰로 설정

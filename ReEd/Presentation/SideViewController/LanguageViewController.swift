@@ -45,13 +45,13 @@ class LanguageViewController: UIViewController, UITableViewDataSource, UITableVi
         // 선택한 언어 처리 로직을 추가합니다.
         let selectedLanguage = languages[indexPath.row]
         print("선택한 언어: \(selectedLanguage)")
-        if selectedLanguage == "한국어" {
-            UserDefaults.standard.set(["ko"], forKey: "AppleLanguages")
-                    UserDefaults.standard.synchronize()
-        }
-        else if selectedLanguage == "영어" {
-            UserDefaults.standard.set(["en"], forKey: "AppleLanguages")
-                UserDefaults.standard.synchronize()
-        }
+        showAlert(message: "미 구현된 기능입니다")
+    }
+    
+    func showAlert(message: String) {
+        let alertController = UIAlertController(title: "", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
     }
 }

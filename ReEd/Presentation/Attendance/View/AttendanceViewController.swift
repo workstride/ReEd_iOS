@@ -53,7 +53,7 @@ class AttendanceViewController: UIViewController, NFCNDEFReaderSessionDelegate {
     }
     
     private let qrCodeIntroduction = UILabel().then {
-        $0.text = NSLocalizedString("QRInfo", comment: "")
+        $0.text = "수업 전 QR코드 영역에 태그하세요"
         $0.font = UIFont.systemFont(ofSize: 14)
         $0.isSkeletonable = true
         $0.textColor = .black
@@ -261,20 +261,7 @@ class AttendanceViewController: UIViewController, NFCNDEFReaderSessionDelegate {
             $0.leading.trailing.equalToSuperview().inset(50)
             $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-10)
         }
-        
-        func setLanguage() {
-            
-            //설정된 언어 코드 가져오기
-            let language = UserDefaults.standard.array(forKey: "AppleLanguages")?.first as! String // 초기에 "ko-KR" , "en-KR" 등으로 저장되어있음
-            let index = language.index(language.startIndex, offsetBy: 2)
-            let languageCode = String(language[..<index]) //"ko" , "en" 등
-            
-            //설정된 언어 파일 가져오기
-            let path = Bundle.main.path(forResource: languageCode, ofType: "lproj")
-            let bundle = Bundle(path: path!)
-            
-            qrCodeIntroduction.text = bundle?.localizedString(forKey: "QRInfo", value: nil, table: nil)
-        }
+
     }
     
     private func setupSideMenu() {
@@ -298,7 +285,7 @@ class AttendanceViewController: UIViewController, NFCNDEFReaderSessionDelegate {
     
     @objc func qrCodeTapped() {
         if keychainManager_role == "TEACHER" {
-            navigationController?.pushViewController(QRCodeGenerateViewController(), animated: true)
+            showAlert(message: "아직 미구현된 기능입니다")
         }
         
         if keychainManager_role == "STUDENT" {
@@ -323,11 +310,10 @@ class AttendanceViewController: UIViewController, NFCNDEFReaderSessionDelegate {
                     switch result {
                     case.success():
                         print("nfc 통신 성공!")
-                        
+                        self.showAlert(message: "출석 완료!")
                     case .failure(let error):
                         print("nfc 통신 실패!")
-                        print(error)
-                        print(nfcValue)
+                        self.showAlert(message: "출석 실패")
                     }
                 }
             }
@@ -336,5 +322,12 @@ class AttendanceViewController: UIViewController, NFCNDEFReaderSessionDelegate {
     
     func readerSession(_ session: NFCNDEFReaderSession, didInvalidateWithError error: Error) {
         print("NFC session invalidated with error: \(error.localizedDescription)")
+    }
+    
+    func showAlert(message: String) {
+        let alertController = UIAlertController(title: "", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
     }
 }

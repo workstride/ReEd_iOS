@@ -114,10 +114,7 @@ class QRCodeScanViewController: UIViewController, AVCaptureMetadataOutputObjects
                 
                 let alertController = UIAlertController(title: "출석완료!", message: nil, preferredStyle: .alert)
                 let okAction = UIAlertAction(title: "확인", style: .default) { _ in
-                    
-                    self?.dismiss(animated: true, completion: {
-                        
-                    })
+                    self?.navigationController?.popViewController(animated: true)
                 }
                 
                 alertController.addAction(okAction)

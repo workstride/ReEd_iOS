@@ -130,7 +130,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         
         checkBox.snp.makeConstraints {
-            $0.width.equalTo(30) // 체크박스의 고정된 너비
+            $0.width.equalTo(30)
         }
     }
     

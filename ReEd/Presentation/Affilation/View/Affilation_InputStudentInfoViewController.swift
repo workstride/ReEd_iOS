@@ -13,9 +13,7 @@ class Affilation_InputStudentInfoViewController: UIViewController {
     
     private let stackView = UIStackView().then {
         $0.axis = .vertical
-        $0.spacing = 20
-        $0.layoutMargins = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
-        $0.isLayoutMarginsRelativeArrangement = true
+        $0.spacing = 10
     }
     
     private let scrollView = UIScrollView().then {
@@ -30,11 +28,11 @@ class Affilation_InputStudentInfoViewController: UIViewController {
         $0.numberOfLines = 2
     }
     
-    private let inputNameTextField = StudentInfoTextField("이름")
-    private let inputBirthTextField = StudentInfoTextField("생년월일")
-    private let inputSchoolTextField = StudentInfoTextField("소속학교")
-    private let inputGradeTextField = StudentInfoTextField("학년")
-    private let inputTelTextField = StudentInfoTextField("전화번호")
+    private let inputNameTextField = InfoTextField("이름")
+    private let inputBirthTextField = InfoTextField("생년월일")
+    private let inputSchoolTextField = InfoTextField("소속학교")
+    private let inputGradeTextField = InfoTextField("학년")
+    private let inputTelTextField = InfoTextField("전화번호")
     
     private let genderPicker = UISegmentedControl().then {
         $0.insertSegment(withTitle: "남성", at: 0, animated: false)

@@ -19,7 +19,7 @@
 		5814A1762AEBCD4C00021D22 /* Affilation_InputEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5814A1752AEBCD4C00021D22 /* Affilation_InputEmailViewController.swift */; };
 		5814A1782AEBCDB300021D22 /* AffilationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5814A1772AEBCDB300021D22 /* AffilationViewModel.swift */; };
 		5814A17C2AEBE3B400021D22 /* Affilation_InputStudentInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5814A17B2AEBE3B400021D22 /* Affilation_InputStudentInfoViewController.swift */; };
-		5814A17E2AEBE49600021D22 /* StudentInfoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5814A17D2AEBE49600021D22 /* StudentInfoTextField.swift */; };
+		5814A17E2AEBE49600021D22 /* InfoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5814A17D2AEBE49600021D22 /* InfoTextField.swift */; };
 		5814A1822AEC16BE00021D22 /* AttendanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5814A1812AEC16BE00021D22 /* AttendanceModel.swift */; };
 		5814A1842AEC193100021D22 /* QRCodeScanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5814A1832AEC193100021D22 /* QRCodeScanViewModel.swift */; };
 		5814A1862AEC207B00021D22 /* DataFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5814A1852AEC207A00021D22 /* DataFormatter.swift */; };
@@ -45,6 +45,10 @@
 		5866D9992AF48CA300830A33 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5866D9982AF48CA300830A33 /* Bundle.swift */; };
 		5871F8842AD8D96B00C8F41D /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 5871F8832AD8D96B00C8F41D /* SideMenu */; };
 		5871F8862AD8DB1400C8F41D /* SideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5871F8852AD8DB1400C8F41D /* SideViewController.swift */; };
+		5891550C2AF929E500F2F590 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5891550B2AF929E500F2F590 /* CalendarViewController.swift */; };
+		5891550F2AF92A1100F2F590 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 5891550E2AF92A1100F2F590 /* FSCalendar */; };
+		589155132AF9B9E800F2F590 /* CustomPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589155122AF9B9E800F2F590 /* CustomPlaceholder.swift */; };
+		589155152AF9CB9F00F2F590 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589155142AF9CB9F00F2F590 /* EventViewController.swift */; };
 		5899900A2ADD473A0034815D /* LoginSelectMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589990092ADD473A0034815D /* LoginSelectMethodViewController.swift */; };
 		5899900E2ADD484F0034815D /* ReedLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5899900D2ADD484F0034815D /* ReedLogo.swift */; };
 		589990102ADE064A0034815D /* LoginInputEamilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5899900F2ADE064A0034815D /* LoginInputEamilViewController.swift */; };
@@ -64,6 +68,7 @@
 		58AC49C72AD6B3710089C900 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 58AC49C62AD6B3710089C900 /* SnapKit */; };
 		58CDD55A2AEFFA2000E6415D /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CDD5592AEFFA2000E6415D /* Loading.swift */; };
 		58CDD55C2AF0775800E6415D /* QRCodeGenerateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CDD55B2AF0775800E6415D /* QRCodeGenerateViewModel.swift */; };
+		58D0C3DB2AFA7A5C0033039A /* Affilation_inputTeacherRoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D0C3DA2AFA7A5C0033039A /* Affilation_inputTeacherRoleViewController.swift */; };
 		58DA02742AF3312000B5AF70 /* InputUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DA02732AF3312000B5AF70 /* InputUserInfo.swift */; };
 		58DE90282AE9026A001AED6E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58DE90272AE9026A001AED6E /* GoogleService-Info.plist */; };
 		58EF1E012AD7648000F96E2D /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 58EF1E002AD7648000F96E2D /* RxSwift */; };
@@ -116,7 +121,7 @@
 		5814A1752AEBCD4C00021D22 /* Affilation_InputEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Affilation_InputEmailViewController.swift; sourceTree = "<group>"; };
 		5814A1772AEBCDB300021D22 /* AffilationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffilationViewModel.swift; sourceTree = "<group>"; };
 		5814A17B2AEBE3B400021D22 /* Affilation_InputStudentInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Affilation_InputStudentInfoViewController.swift; sourceTree = "<group>"; };
-		5814A17D2AEBE49600021D22 /* StudentInfoTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentInfoTextField.swift; sourceTree = "<group>"; };
+		5814A17D2AEBE49600021D22 /* InfoTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTextField.swift; sourceTree = "<group>"; };
 		5814A1812AEC16BE00021D22 /* AttendanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceModel.swift; sourceTree = "<group>"; };
 		5814A1832AEC193100021D22 /* QRCodeScanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScanViewModel.swift; sourceTree = "<group>"; };
 		5814A1852AEC207A00021D22 /* DataFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFormatter.swift; sourceTree = "<group>"; };
@@ -144,6 +149,9 @@
 		5866D9962AF3EEFC00830A33 /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
 		5866D9982AF48CA300830A33 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		5871F8852AD8DB1400C8F41D /* SideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideViewController.swift; sourceTree = "<group>"; };
+		5891550B2AF929E500F2F590 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		589155122AF9B9E800F2F590 /* CustomPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPlaceholder.swift; sourceTree = "<group>"; };
+		589155142AF9CB9F00F2F590 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		589990092ADD473A0034815D /* LoginSelectMethodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSelectMethodViewController.swift; sourceTree = "<group>"; };
 		5899900D2ADD484F0034815D /* ReedLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReedLogo.swift; sourceTree = "<group>"; };
 		5899900F2ADE064A0034815D /* LoginInputEamilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInputEamilViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +168,7 @@
 		58A8FA392AF0BFC6004CCC0B /* NFCScanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCScanViewModel.swift; sourceTree = "<group>"; };
 		58CDD5592AEFFA2000E6415D /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
 		58CDD55B2AF0775800E6415D /* QRCodeGenerateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeGenerateViewModel.swift; sourceTree = "<group>"; };
+		58D0C3DA2AFA7A5C0033039A /* Affilation_inputTeacherRoleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Affilation_inputTeacherRoleViewController.swift; sourceTree = "<group>"; };
 		58DA02732AF3312000B5AF70 /* InputUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputUserInfo.swift; sourceTree = "<group>"; };
 		58DE90262AE9012D001AED6E /* ReEd.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ReEd.entitlements; sourceTree = "<group>"; };
 		58DE90272AE9026A001AED6E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -182,6 +191,7 @@
 				5871F8842AD8D96B00C8F41D /* SideMenu in Frameworks */,
 				5899A88D2AE17860002D5E2B /* SwiftKeychainWrapper in Frameworks */,
 				58331E902AD692B800BF0933 /* Then in Frameworks */,
+				5891550F2AF92A1100F2F590 /* FSCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +253,7 @@
 				5814A1732AEBCD0800021D22 /* Affilation_SelectRoleViewController.swift */,
 				5814A17B2AEBE3B400021D22 /* Affilation_InputStudentInfoViewController.swift */,
 				5814A1872AEC339900021D22 /* Affilation_InputPasswordViewController.swift */,
+				58D0C3DA2AFA7A5C0033039A /* Affilation_inputTeacherRoleViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -411,10 +422,11 @@
 				589FBD422AD6BD1D00EBF951 /* PlaceHolder.swift */,
 				589FBD462AD6BDEC00EBF951 /* UIViewController.swift */,
 				589FBD482AD6BE1200EBF951 /* HexCode.swift */,
-				5814A17D2AEBE49600021D22 /* StudentInfoTextField.swift */,
+				5814A17D2AEBE49600021D22 /* InfoTextField.swift */,
 				5814A1852AEC207A00021D22 /* DataFormatter.swift */,
 				58CDD5592AEFFA2000E6415D /* Loading.swift */,
 				5866D9982AF48CA300830A33 /* Bundle.swift */,
+				589155122AF9B9E800F2F590 /* CustomPlaceholder.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -467,6 +479,8 @@
 				5866D9962AF3EEFC00830A33 /* LanguageViewController.swift */,
 				580971332AF4977F00B1C23F /* VersionInfoViewController.swift */,
 				580971472AF6BB4300B1C23F /* NotificationSettingsViewController.swift */,
+				5891550B2AF929E500F2F590 /* CalendarViewController.swift */,
+				589155142AF9CB9F00F2F590 /* EventViewController.swift */,
 			);
 			path = SideViewController;
 			sourceTree = "<group>";
@@ -512,6 +526,7 @@
 				5899A88C2AE17860002D5E2B /* SwiftKeychainWrapper */,
 				580971362AF6B33500B1C23F /* FirebaseMessaging */,
 				58F62DB42AF780E000E5676F /* QRCode */,
+				5891550E2AF92A1100F2F590 /* FSCalendar */,
 			);
 			productName = ReEd;
 			productReference = 58331E572AD6923D00BF0933 /* ReEd.app */;
@@ -597,6 +612,7 @@
 				58EC17712AF149BC003B9C40 /* XCRemoteSwiftPackageReference "EFQRCode" */,
 				580971352AF6B33500B1C23F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				58F62DB32AF780DF00E5676F /* XCRemoteSwiftPackageReference "QRCode" */,
+				5891550D2AF92A1100F2F590 /* XCRemoteSwiftPackageReference "FSCalendar" */,
 			);
 			productRefGroup = 58331E582AD6923D00BF0933 /* Products */;
 			projectDirPath = "";
@@ -647,8 +663,10 @@
 				589FBD3D2AD6B4CB00EBF951 /* LoginViewModel.swift in Sources */,
 				58A8FA3A2AF0BFC6004CCC0B /* NFCScanViewModel.swift in Sources */,
 				580971442AF6B85700B1C23F /* PostViewModel.swift in Sources */,
+				58D0C3DB2AFA7A5C0033039A /* Affilation_inputTeacherRoleViewController.swift in Sources */,
 				589FBD402AD6BC2500EBF951 /* Login.swift in Sources */,
 				589FBD492AD6BE1200EBF951 /* HexCode.swift in Sources */,
+				589155152AF9CB9F00F2F590 /* EventViewController.swift in Sources */,
 				58331E5F2AD6923D00BF0933 /* LoginViewController.swift in Sources */,
 				589FBD4E2AD6C20000EBF951 /* LoginSelectViewController.swift in Sources */,
 				589FBD4C2AD6BEF400EBF951 /* CheckBox.swift in Sources */,
@@ -666,6 +684,7 @@
 				5871F8862AD8DB1400C8F41D /* SideViewController.swift in Sources */,
 				589FBD472AD6BDEC00EBF951 /* UIViewController.swift in Sources */,
 				589FBD452AD6BDA900EBF951 /* Coordinator.swift in Sources */,
+				5891550C2AF929E500F2F590 /* CalendarViewController.swift in Sources */,
 				58CDD55A2AEFFA2000E6415D /* Loading.swift in Sources */,
 				580971462AF6B8D700B1C23F /* Post.swift in Sources */,
 				5814A1762AEBCD4C00021D22 /* Affilation_InputEmailViewController.swift in Sources */,
@@ -674,11 +693,12 @@
 				58F5F59D2AE247DB0059A9BB /* UserProfileViewModel.swift in Sources */,
 				580971342AF4977F00B1C23F /* VersionInfoViewController.swift in Sources */,
 				5814A1782AEBCDB300021D22 /* AffilationViewModel.swift in Sources */,
+				589155132AF9B9E800F2F590 /* CustomPlaceholder.swift in Sources */,
 				5814A1882AEC339900021D22 /* Affilation_InputPasswordViewController.swift in Sources */,
 				5899A88A2AE17831002D5E2B /* KeychainManager.swift in Sources */,
 				5899900E2ADD484F0034815D /* ReedLogo.swift in Sources */,
 				580971422AF6B83A00B1C23F /* PostViewController.swift in Sources */,
-				5814A17E2AEBE49600021D22 /* StudentInfoTextField.swift in Sources */,
+				5814A17E2AEBE49600021D22 /* InfoTextField.swift in Sources */,
 				580A18022ADFCA8200CAC0EF /* CustomButton.swift in Sources */,
 				589FBD532AD6C2E900EBF951 /* AttendanceViewController.swift in Sources */,
 				5866D98F2AF397CA00830A33 /* Affilation_InputEmailViIewModel.swift in Sources */,
@@ -1107,6 +1127,14 @@
 				minimumVersion = 6.5.0;
 			};
 		};
+		5891550D2AF92A1100F2F590 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
 		5899A8862AE14BBE002D5E2B /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Juanpe/SkeletonView";
@@ -1161,6 +1189,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5871F8822AD8D96B00C8F41D /* XCRemoteSwiftPackageReference "SideMenu" */;
 			productName = SideMenu;
+		};
+		5891550E2AF92A1100F2F590 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5891550D2AF92A1100F2F590 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
 		};
 		5899A8872AE14BBE002D5E2B /* SkeletonView */ = {
 			isa = XCSwiftPackageProductDependency;

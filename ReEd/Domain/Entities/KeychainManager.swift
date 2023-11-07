@@ -35,22 +35,5 @@ class KeychainManager {
         let role = KeychainWrapper.standard.string(forKey: roleKey)
         return (email, token, role)
     }
-
-    func deleteLoginInfo(isDeletionAllowed: Bool) {
-        if isDeletionAllowed {
-            // 키체인에서 로그인 정보를 삭제
-            let emailDeleted = KeychainWrapper.standard.removeObject(forKey: emailKey)
-            let tokenDeleted = KeychainWrapper.standard.removeObject(forKey: tokenKey)
-            let roleDeleted = KeychainWrapper.standard.removeObject(forKey: roleKey)
-
-            if emailDeleted && tokenDeleted && roleDeleted {
-                print("로그인 정보가 키체인에서 삭제되었습니다.")
-            } else {
-                print("로그인 정보를 키체인에서 삭제하는 데 문제가 발생했습니다.")
-            }
-        } else {
-            print("로그인 정보 삭제가 허용되지 않았습니다.")
-        }
-    }
 }
 

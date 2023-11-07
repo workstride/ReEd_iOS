@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StudentInfoTextField: UITextField {
+class InfoTextField: UITextField {
     init(_ title: String) {
         super.init(frame: .zero)
         
