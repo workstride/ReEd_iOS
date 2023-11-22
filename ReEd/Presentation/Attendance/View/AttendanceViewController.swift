@@ -354,3 +354,6 @@ extension AttendanceViewController : NFCTagReaderSessionDelegate {
     }
     
 }
+
+//git filter-branch -f --index-filter 'git rm --cached --ignore-unmatch ./Development.xcconfig' --prune-empty -- --all
+
