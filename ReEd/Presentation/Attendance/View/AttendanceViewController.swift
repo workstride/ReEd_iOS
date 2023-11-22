@@ -311,6 +311,7 @@ class AttendanceViewController: UIViewController  {
             return
         }
         let session = NFCTagReaderSession(pollingOption:  [.iso14443, .iso15693, .iso18092], delegate: self, queue: nil)
+//        let session = NFCTagReaderSession(delegate: self, queue: nil, invalidateAfterFirstRead: false)
         session?.begin()
     }
     
