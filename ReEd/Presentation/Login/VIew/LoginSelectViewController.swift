@@ -76,10 +76,18 @@ extension LoginSelectViewController {
     }
     
     @objc private func didTapJoinButton() {
-        navigationController?.pushViewController(Affilation_InputEmailViewController(), animated: true)
+        showAlert(message: "준비중입니다.")
+        //FIXME: 회원가입 뷰 준비
     }
     
     @objc private func didTapLoginButton() {
         navigationController?.pushViewController(LoginViewController(), animated: true)
+    }
+    
+    func showAlert(message: String) {
+        let alertController = UIAlertController(title: "", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
     }
 }

@@ -20,7 +20,7 @@ class QRCodeScanViewModel {
         }
 
         let request = QRCodeRequest(code: code)
-        let serverURL = "http://52.79.171.108:8080/api/attendance/qrcode"
+        let serverURL = ServiceConfiguration.baseUrl + "/attendance/qrcode"
 
         AF.request(serverURL, method: .post, parameters: request, encoder: JSONParameterEncoder.default, headers: headers)
             .validate(statusCode: 200..<300)

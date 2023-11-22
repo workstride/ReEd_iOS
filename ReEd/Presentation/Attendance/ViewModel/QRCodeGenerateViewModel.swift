@@ -33,7 +33,7 @@ class QRCodeGenerateViewModel {
             "memberId": 7
         ]
         
-        let serverURL = "http://52.79.171.108:8080/api/attendance/generate/qrcode"
+        let serverURL = ServiceConfiguration.baseUrl + "/attendance/generate/qrcode"
         
         AF.request(serverURL, method: .post, parameters: requestBody, encoder: JSONParameterEncoder.default, headers: headers)
             .validate(statusCode: 200..<300)

@@ -14,7 +14,7 @@ import SnapKit
 import Then
 import UIKit
 
-class AttendanceViewController: UIViewController, NFCNDEFReaderSessionDelegate {
+class AttendanceViewController: UIViewController  {
     
     let keychainManager_role = KeychainManager.shared.getLoginInfo().role
     
@@ -53,7 +53,7 @@ class AttendanceViewController: UIViewController, NFCNDEFReaderSessionDelegate {
     }
     
     private let qrCodeIntroduction = UILabel().then {
-        $0.text = "수업 전 QR코드 영역에 태그하세요"
+        $0.text = "수업 전 QR코드를 인식해주세요"
         $0.font = UIFont.systemFont(ofSize: 14)
         $0.isSkeletonable = true
         $0.textColor = .black
@@ -261,7 +261,20 @@ class AttendanceViewController: UIViewController, NFCNDEFReaderSessionDelegate {
             $0.leading.trailing.equalToSuperview().inset(50)
             $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-10)
         }
-
+        
+        func setLanguage() {
+            
+            //설정된 언어 코드 가져오기
+            let language = UserDefaults.standard.array(forKey: "AppleLanguages")?.first as! String // 초기에 "ko-KR" , "en-KR" 등으로 저장되어있음
+            let index = language.index(language.startIndex, offsetBy: 2)
+            let languageCode = String(language[..<index]) //"ko" , "en" 등
+            
+            //설정된 언어 파일 가져오기
+            let path = Bundle.main.path(forResource: languageCode, ofType: "lproj")
+            let bundle = Bundle(path: path!)
+            
+            qrCodeIntroduction.text = bundle?.localizedString(forKey: "QRInfo", value: nil, table: nil)
+        }
     }
     
     private func setupSideMenu() {
@@ -285,7 +298,7 @@ class AttendanceViewController: UIViewController, NFCNDEFReaderSessionDelegate {
     
     @objc func qrCodeTapped() {
         if keychainManager_role == "TEACHER" {
-            showAlert(message: "아직 미구현된 기능입니다")
+            navigationController?.pushViewController(QRCodeGenerateViewController(), animated: true)
         }
         
         if keychainManager_role == "STUDENT" {
@@ -297,37 +310,46 @@ class AttendanceViewController: UIViewController, NFCNDEFReaderSessionDelegate {
         guard NFCNDEFReaderSession.readingAvailable else {
             return
         }
-        
-        let session = NFCNDEFReaderSession(delegate: self, queue: nil, invalidateAfterFirstRead: false)
-        session.begin()
+        let session = NFCTagReaderSession(pollingOption:  [.iso14443, .iso15693, .iso18092], delegate: self, queue: nil)
+        session?.begin()
     }
     
-    func readerSession(_ session: NFCNDEFReaderSession, didDetectNDEFs messages: [NFCNDEFMessage]) {
-        if let firstMessage = messages.first, let firstRecord = firstMessage.records.first {
-            let payloadData = firstRecord.payload
-            if let nfcValue = String(data: payloadData, encoding: .utf8) {
-                viewModel.sendNFCToServer(code: nfcValue) { result in
-                    switch result {
-                    case.success():
-                        print("nfc 통신 성공!")
-                        self.showAlert(message: "출석 완료!")
-                    case .failure(let error):
-                        print("nfc 통신 실패!")
-                        self.showAlert(message: "출석 실패")
+}
+
+extension AttendanceViewController : NFCTagReaderSessionDelegate {
+    
+    func tagReaderSessionDidBecomeActive(_ session: NFCTagReaderSession) {
+        
+    }
+    
+    func tagReaderSession(_ session: NFCTagReaderSession, didInvalidateWithError error: Error) {
+        
+    }
+    
+    func tagReaderSession(_ session: NFCTagReaderSession, didDetect tags: [NFCTag]) {
+        if case let NFCTag.miFare(tag) = tags.first! {
+            session.connect(to: tags.first!) { (error: Error?) in
+                let apdu = NFCISO7816APDU(instructionClass: 0, instructionCode: 0xB0, p1Parameter: 0, p2Parameter: 0, data: Data(), expectedResponseLength: 16)
+                tag.sendMiFareISO7816Command(apdu) { (apduData, sw1, sw2, error) in
+                    let nfcValue = tag.identifier
+                        .map { (data) -> String in
+                            return String(format: "%X", data)
+                        }
+                        .joined()
+                    print(nfcValue)
+                    self.viewModel.sendNFCToServer(code: nfcValue) { result in
+                        switch result {
+                        case.success():
+                            print("nfc 통신 성공!")
+                        case .failure(let error):
+                            print("nfc 통신 실패!")
+                            print(error)
+                            print(nfcValue)
+                        }
                     }
                 }
             }
         }
     }
     
-    func readerSession(_ session: NFCNDEFReaderSession, didInvalidateWithError error: Error) {
-        print("NFC session invalidated with error: \(error.localizedDescription)")
-    }
-    
-    func showAlert(message: String) {
-        let alertController = UIAlertController(title: "", message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
-        alertController.addAction(okAction)
-        present(alertController, animated: true, completion: nil)
-    }
 }

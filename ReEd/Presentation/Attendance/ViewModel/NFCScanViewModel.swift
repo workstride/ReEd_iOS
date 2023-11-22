@@ -20,8 +20,7 @@ class NFCScanViewModel {
 
         let request = NFCRequest(code: code)
         
-
-        let serverURL = "http://52.79.171.108:8080/api/attendance/nfc"
+        let serverURL = ServiceConfiguration.baseUrl +  "/attendance/nfc"
         
         AF.request(serverURL, method: .post, parameters: request, encoder: JSONParameterEncoder.default, headers: headers)
                   .validate(statusCode: 200..<300)

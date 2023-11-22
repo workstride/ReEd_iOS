@@ -49,7 +49,6 @@
 		5891550F2AF92A1100F2F590 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 5891550E2AF92A1100F2F590 /* FSCalendar */; };
 		589155132AF9B9E800F2F590 /* CustomPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589155122AF9B9E800F2F590 /* CustomPlaceholder.swift */; };
 		589155152AF9CB9F00F2F590 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589155142AF9CB9F00F2F590 /* EventViewController.swift */; };
-		5899900A2ADD473A0034815D /* LoginSelectMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589990092ADD473A0034815D /* LoginSelectMethodViewController.swift */; };
 		5899900E2ADD484F0034815D /* ReedLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5899900D2ADD484F0034815D /* ReedLogo.swift */; };
 		589990102ADE064A0034815D /* LoginInputEamilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5899900F2ADE064A0034815D /* LoginInputEamilViewController.swift */; };
 		5899A8882AE14BBE002D5E2B /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = 5899A8872AE14BBE002D5E2B /* SkeletonView */; };
@@ -152,7 +151,6 @@
 		5891550B2AF929E500F2F590 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		589155122AF9B9E800F2F590 /* CustomPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPlaceholder.swift; sourceTree = "<group>"; };
 		589155142AF9CB9F00F2F590 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
-		589990092ADD473A0034815D /* LoginSelectMethodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSelectMethodViewController.swift; sourceTree = "<group>"; };
 		5899900D2ADD484F0034815D /* ReedLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReedLogo.swift; sourceTree = "<group>"; };
 		5899900F2ADE064A0034815D /* LoginInputEamilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInputEamilViewController.swift; sourceTree = "<group>"; };
 		5899A8892AE17831002D5E2B /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
@@ -392,7 +390,6 @@
 			children = (
 				58331E5E2AD6923D00BF0933 /* LoginViewController.swift */,
 				589FBD4D2AD6C20000EBF951 /* LoginSelectViewController.swift */,
-				589990092ADD473A0034815D /* LoginSelectMethodViewController.swift */,
 				5899900F2ADE064A0034815D /* LoginInputEamilViewController.swift */,
 			);
 			path = VIew;
@@ -707,7 +704,6 @@
 				589990102ADE064A0034815D /* LoginInputEamilViewController.swift in Sources */,
 				5814A1862AEC207B00021D22 /* DataFormatter.swift in Sources */,
 				5814A1842AEC193100021D22 /* QRCodeScanViewModel.swift in Sources */,
-				5899900A2ADD473A0034815D /* LoginSelectMethodViewController.swift in Sources */,
 				58F5F59B2AE23D940059A9BB /* UserInfoModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

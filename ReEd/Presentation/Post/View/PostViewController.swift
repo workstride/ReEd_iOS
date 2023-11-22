@@ -9,8 +9,10 @@ import UIKit
 import SnapKit
 import Alamofire
 
+//FIXME: 게시판 뷰 수정하기
 class PostViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
+    
     let tableView = UITableView()
     let refreshControl = UIRefreshControl()
     let activityIndicator = UIActivityIndicatorView(style: .large)

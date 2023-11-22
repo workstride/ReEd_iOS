@@ -14,7 +14,7 @@ class Coordinator {
     }
 
     func start(){
-        let rootViewController = Affilation_inputTeacherRoleViewController()
+        let rootViewController = LoginSelectViewController()
         let navigationViewController = UINavigationController(rootViewController:
             rootViewController)
         navigationViewController.navigationBar.tintColor = .black

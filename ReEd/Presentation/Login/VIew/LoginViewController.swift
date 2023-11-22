@@ -169,9 +169,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - 로그인 버튼 및 로그인 서버 요청
     @objc private func didTapforgotPasdwordbutton() {
-        dismiss(animated: true) {
-            UIApplication.shared.windows.first?.rootViewController = LoginSelectViewController()
-        }
+       showAlert(message: "비밀번호는 웹에서 변경해주세요")
+        //FIXME: 비밀번호 변경 모델 만들고 연결
     }
     
     // MARK: - 비밀번호를 잊어버리셨나요? 버튼
@@ -188,16 +187,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     // MARK: - 비밀번호 보기/숨기기
     
     @objc private func didTapkeepLoginCheckBox() {
-        //        if let userID = emailTextField.text, let password = passwordTextField.text {
         checkBox.checkboxTappedHandler = {
             isChecked in
             if isChecked {
                 print("CheckBox is checked.")
-                
-                // 여기에서 필요한 작업을 수행하세요.
+                //FIXME: UserDefault로 로그인 유지 구현하기
             } else {
                 print("CheckBox is unchecked.")
-                // 여기에서 필요한 작업을 수행하세요.
+
             }
         }
     }
