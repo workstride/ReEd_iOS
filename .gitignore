@@ -1,2 +1,3 @@
 */*.xcconfig
 */*.entitlements
+GoogleService-Info.plist
